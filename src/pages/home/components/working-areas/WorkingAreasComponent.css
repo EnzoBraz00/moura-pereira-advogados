@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+*{
+    font-family: 'PT Serif', serif;
+    margin: 0;
+    padding: 0;
+}
+
+.working-areas-component {
+    margin-top: 48px;
+    width: 100%;
+    min-height: 400px;
+    height: auto;
+    background-color: #1A1247;
+    text-align: center;
+    padding-bottom: 48px;
+}
+
+.working-areas-component h5{
+    font-size: 16px;
+    font-weight: 700;
+    color: #C3A864;
+    padding-top: 64px;
+    letter-spacing: 3px;
+}
+
+.working-areas-component h2{
+    font-size: 32px;
+    font-weight: 700;
+    color: #FFFFFF;
+    margin-bottom: 32px;
+}
+
+.working-areas-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px 60px; 
+    width: 100%;
+    margin: 0 auto;
+    max-width: 1100px;
+}
+
+.working-areas-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    width: 300px;
+    flex: 0 1 300px;
+    padding: 24px 12px;
+    border-radius: 16px;
+    transition: transform 0.2s, box-shadow 0.2s, background 0.2s;
+    background: rgba(255,255,255,0.01);
+    box-shadow: 0 2px 8px 0 rgba(44,31,118,0.04);
+    cursor: pointer;
+    position: relative;
+}
+
+.working-areas-item:hover {
+    transform: translateY(-8px) scale(1.04);
+    box-shadow: 0 8px 24px 0 rgba(195,168,100,0.18);
+    background: rgba(195,168,100,0.08);
+}
+
+.working-areas-item img {
+    width: 36px;
+    height: 36px;
+    margin-bottom: 8px;
+    transition: filter 0.2s;
+}
+
+.working-areas-item:hover img {
+    filter: drop-shadow(0 0 8px #C3A86488);
+}
+
+.working-areas-item h6 {
+    font-size: 20px;
+    font-weight: 700;
+    color: #C3A864;
+    letter-spacing: 2px;
+    margin: 0;
+}
+
+.working-areas-item .line {
+    width: 48px;
+    height: 2px;
+    background-color: #C3A864;
+    margin: 0 auto 8px auto;
+    opacity: 0.3;
+    transition: opacity 0.2s;
+}
+
+.working-areas-item:hover .line {
+    opacity: 1;
+}
+
+.working-areas-item p {
+    font-size: 15px;
+    color: #fff;
+    text-align: center;
+    line-height: 1.5;
+    margin: 0;
+    margin-top: 8px;
+}
