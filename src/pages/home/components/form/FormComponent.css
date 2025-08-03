@@ -1,0 +1,157 @@
+@import url("https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+* {
+  font-family: "PT Serif", serif;
+  margin: 0;
+  padding: 0;
+}
+
+.form-component {
+  width: 100%;
+  height: 715px;
+  background-color: #1a1247;
+  display: flex;
+  flex-direction: row;
+}
+
+.form-component img {
+  height: 100%;
+  max-width: 50%;
+}
+
+.form-content {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.form-content h2 {
+  font-size: 40px;
+  font-weight: 700;
+  color: #c3a864;
+  margin-top: 64px;
+  margin-left: 64px;
+}
+
+.form-content h4 {
+  font-size: 24px;
+  margin-left: 64px;
+  font-weight: 400;
+  color: #fff;
+}
+
+.form-input {
+  width: 554px;
+  height: 40px;
+  background-color: #fff;
+  border-radius: 2px;
+  margin-left: 64px;
+  display: flex;
+  align-items: center;
+}
+
+.input-icon {
+  width: 24px;
+  height: 24px;
+  margin-left: 8px; /* Reduzido */
+}
+
+.input-field {
+  flex: 1;
+  height: 40px;
+  border: none;
+  padding-left: 4px; /* Reduzido */
+  font-size: 16px;
+}
+
+.input-field input {
+  width: 100%;
+  height: 100%;
+  border: none;
+  outline: none;
+  padding-left: 4px; /* Reduzido */
+  font-size: 16px;
+  background: transparent;
+  box-sizing: border-box;
+}
+
+.contact-form {
+  display: flex;
+  gap: 24px;
+  flex-direction: column;
+}
+
+.inputs-container {
+  display: flex;
+  flex-direction: row;
+  margin-left: 64px;
+  gap: 16px;
+}
+
+.form-input-small {
+  width: 269px;
+  height: 40px;
+  background-color: #fff;
+  border-radius: 2px;
+  display: flex;
+  align-items: center;
+}
+
+.form-input-big {
+  margin-left: 64px;
+  width: 554px;
+  height: 176px;
+  background-color: #fff;
+  border-radius: 2px;
+  display: flex;
+  align-items: flex-start;
+}
+
+.form-input-big .input-field {
+  flex: 1;
+  height: 100%;
+  padding-left: 8px;
+  display: flex;
+}
+
+.form-input-big .input-field textarea {
+  width: 100%;
+  height: 100%;
+  border: none;
+  outline: none;
+  resize: none;
+  font-size: 16px;
+  background: transparent;
+  box-sizing: border-box;
+  padding: 16px 8px 8px 8px;
+}
+
+.buttons-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+.send-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 138px;
+  height: 40px;
+  color: #fff;
+  background-color: #c3a864;
+  border-radius: 4px;
+  box-shadow: 0 2px 12px 0 rgba(44, 31, 118, 0.06);
+  font-size: 20px;
+  font-weight: 700;
+  border: none;
+  text-align: center;
+  cursor: pointer;
+  transition: 0.3s ease, box-shadow 0.3s ease;
+}
+
+.posts-button:hover {
+  background-color: #b39a5c;
+  box-shadow: 0 4px 16px rgba(44, 31, 118, 0.1);
+  transition: 0.5s ease-in-out;
+}
+

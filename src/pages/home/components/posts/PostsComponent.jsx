@@ -32,12 +32,12 @@ const PostsComponent = () => {
       <h5 className="posts-subtitle">POSTAGENS ORIGINAIS</h5>
       <h2 className="posts-title">Fique por dentro do mundo jurídico</h2>
       <div className="posts-list">
-        {posts.map((post, index) => (
+        {posts.map((post) => (
           <div className="post-item" key={post.title}>
             <div className="post-specs">
               <img src={post.pfp} alt={post.title} />
               <span className="post-author">
-                Postado por: <span className="author-name">{post.author}</span>
+                Autor: <span className="author-name">{post.author}</span>
               </span>
             </div>
             <h4>{post.title}</h4>
@@ -45,6 +45,7 @@ const PostsComponent = () => {
           </div>
         ))}
       </div>
+      <button className="posts-button">VEJA MAIS PUBLICAÇÕES</button>
     </div>
   );
 };

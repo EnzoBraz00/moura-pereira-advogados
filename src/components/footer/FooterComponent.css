@@ -1,0 +1,33 @@
+.footer-container {
+    width: 100%;
+    background: #1a1247;
+    color: #fff;
+    text-align: center;
+    padding: 24px 0;
+}
+
+.footer-contents {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    margin-left: 80px;
+    margin-top: 16px;
+    gap: 16px;
+}
+
+.adress {
+    display: flex;
+    align-items: center;
+    gap: 8px; 
+}
+
+.adress a {
+    color: #fff;
+    text-decoration: none;
+    transition: 0.5s;
+}
+
+.adress a:hover {
+    transition: 0.5s;
+    color: #bdbdbd;
+}

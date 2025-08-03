@@ -6,6 +6,7 @@ import "./HomeComponent.css";
 import ObjectivesComponent from "./components/objectives/ObjectivesComponent";
 import WorkingAreasComponent from "./components/working-areas/WorkingAreasComponent";
 import PostsComponent from "./components/posts/PostsComponent";
+import FormComponent from "./components/form/FormComponent";
 
 const HomeComponent = () => {
   return (
@@ -38,7 +39,7 @@ const HomeComponent = () => {
           <h6>SOBRE O GRUPO</h6>
           <h1>Excelência jurídica que transforma problemas em soluções.</h1>
           <p>
-            A Advocacia Moura Pereira foi idealizada com o objeto de transformar
+            A Advocacia Moura Pereira foi idealizada com o objeto de transformar
             a forma de relacionamento com as pessoas, entregamos um atendimento
             humanizado. <br /> <br /> Oferecemos assessoria jurídica e todo
             suporte necessário com foco na solução de seus problemas, seguindo
@@ -47,7 +48,7 @@ const HomeComponent = () => {
             escritório, proporcionando aos nossos clientes uma atuação jurídica
             assertiva, transparente e de excelência. <br /> <br /> Estamos a
             disposição para entendermos suas demandas jurídicas e apresentarmos
-            a melhor solução para cada caso. Fale conosco!
+            a melhor solução para cada caso. Fale conosco!
           </p>
           <div className="contact-info">
             <h3 id="about-link">(11) 97448-1602</h3>
@@ -64,6 +65,9 @@ const HomeComponent = () => {
       </div>
       <div className="posts-container">
         <PostsComponent />
+      </div>
+      <div className="form-container">
+        <FormComponent />
       </div>
     </div>
   );

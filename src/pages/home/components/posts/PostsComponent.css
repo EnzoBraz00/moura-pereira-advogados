@@ -42,7 +42,7 @@
     width: 100%;
     margin-bottom: 48px;
     max-width: 1200px;
-    overflow: visible; /* importante para hover */
+    overflow: visible; 
 }
 
 .post-item {
@@ -101,4 +101,28 @@
     color: #222;
     margin: 0;
     line-height: 1.5;
+}
+
+.posts-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 287px;
+    height: 40px;
+    color: #fff;
+    background-color: #C3A864;
+    border-radius: 4px;
+    box-shadow: 0 2px 12px 0 rgba(44,31,118,0.06);
+    font-size: 16px;
+    font-weight: 700;
+    border: none;
+    text-align: center;
+    cursor: pointer;
+    transition:0.3s ease, box-shadow 0.3s ease;
+}
+
+.posts-button:hover {
+    background-color: #b39a5c;
+    box-shadow: 0 4px 16px rgba(44,31,118,0.1);
+    transition: 0.5s ease-in-out;
 }
