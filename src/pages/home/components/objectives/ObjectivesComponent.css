@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+body{
+    font-family: 'PT Serif', serif;
+    margin: 0;
+    padding: 0;
+}
+
+.objectives-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-left: 64px;
+    margin-right: 64px;
+    margin-top: 48px;
+    gap: 88px;
+}
+
+#objectives-box {
+    width: 328px;
+    height: 353px;
+    background-color: #1A1247;
+    color: #fff;
+}
+
+#title-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: #2C1F76;
+    height: 48px;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+#img-container {
+    width: 48px;
+    height: 48px;
+    background-color: #C3A864;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+
+.mission-icon {
+    width: 36px;
+    height: 36px;
+    margin-top: 6px;
+    display: block;
+}
+
+#title {
+    text-align: center;
+    margin-left: 32px;
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 1.5rem;
+    line-height: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+}
+
+#description {
+    margin: 24px 24px 24px;
+    font-size: 16px;
+    line-height: 1.5;
+}
