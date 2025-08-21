@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+*{
+    font-family: 'PT Serif', serif;
+    margin: 0;
+    padding: 0;
+}
+.blog-component {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.title-texts {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    text-align: center;
+}
+
+
+.title-texts h6 {
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    color: #C3A864; 
+    margin: 0 0 8px 0;
+}
+
+.title-texts h1 {
+    margin: 0 0 16px 0;
+    font-size: 32px;
+    font-weight: 700;
+}
+

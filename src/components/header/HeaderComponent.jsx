@@ -1,6 +1,7 @@
 import React from 'react'
 import './HeaderComponent.css'
 import logo from '../../assets/firm-logo.png'
+import { Link } from 'react-router-dom'
 
 const HeaderComponent = () => {
   return (
@@ -11,10 +12,10 @@ const HeaderComponent = () => {
         <div className='header-content'>
             <img src={logo} alt="Moura Pereira Advogados Logo" className='header-logo' />
             <div className='header-quick-access'>
-                <a href="#home" className='header-link'>HOME</a>
-                <a href="#about" className='header-link'>ÁREAS</a>
-                <a href="#services" className='header-link'>CONTATO</a>
-                <a href="#contact" className='header-link'>POSTS</a>
+                <Link to="/" className='header-link'>HOME</Link>
+                <Link to="/working-area" className='header-link'>ÁREAS</Link>
+                <Link to="/blog" className='header-link'>POSTS</Link>
+                <Link to="/contact" className='header-link'>CONTATO</Link>
             </div>
         </div>
     </div>
