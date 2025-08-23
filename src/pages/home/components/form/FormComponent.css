@@ -22,12 +22,6 @@
 .form-component img {
   height: 100%;
   max-width: 50%;
-  transition: all 0.4s ease;
-}
-
-.form-component:hover img {
-  transform: scale(1.02);
-  filter: brightness(1.1);
 }
 
 .form-content {
