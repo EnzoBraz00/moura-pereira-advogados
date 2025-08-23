@@ -1,0 +1,344 @@
+@import url("https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+
+* {
+  font-family: "PT Serif", serif;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #f8f9fa;
+}
+
+.working-areas-details-component {
+  margin-top: 0;
+  background-color: #fff;
+  position: relative;
+  overflow-x: hidden;
+}
+
+.area-title-container {
+  height: 547px;
+  background-image: url("https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=1200&h=600&fit=crop");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  display: flex;
+  align-items: end;
+  justify-content: center;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.area-title-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+
+.area-title-container:hover::before {
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.area-title-container h1 {
+  font-size: 44px;
+  background-color: #fff;
+  padding: 24px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 2px 24px 0 rgba(17, 12, 44, 0.06);
+  position: sticky;
+  top: 20px;
+  z-index: 10;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.area-title-container h1:hover {
+  box-shadow: 0 8px 32px 0 rgba(17, 12, 44, 0.15);
+  transform: translateY(-2px);
+  background: linear-gradient(135deg, #fff 0%, #f8f9fa 100%);
+}
+
+.area-texts-container {
+  padding: 0 128px;
+  padding-top: 64px;
+  position: relative;
+  z-index: 5;
+  background: #fff;
+  border-radius: 16px 16px 0 0;
+  margin-top: -40px;
+  box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.area-texts-container .area-description {
+  margin-top: 64px;
+  text-align: left;
+  font-size: 20px;
+  line-height: 1.6;
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeInUp 0.8s ease forwards 0.3s;
+}
+
+.services-container {
+  display: flex;
+  flex-direction: row;
+  gap: 245px;
+  margin-top: 64px;
+}
+
+.services-container .services-section {
+  width: 474px;
+  transition: all 0.3s ease;
+  padding: 24px;
+  border-radius: 12px;
+  position: relative;
+  overflow: hidden;
+}
+
+.services-section:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.1);
+  background: linear-gradient(135deg, #fff 0%, #f8f9fa 100%);
+}
+
+.services-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(195, 168, 100, 0.1),
+    transparent
+  );
+  transition: left 0.5s ease;
+}
+
+.services-section:hover::before {
+  left: 100%;
+}
+
+.services-section h2 {
+  font-size: 24px;
+  text-align: left;
+  font-weight: 700;
+  margin-bottom: 24px;
+  transition: all 0.3s ease;
+  position: relative;
+  z-index: 2;
+}
+
+.services-section:hover h2 {
+  color: #c3a864;
+  transform: translateX(8px);
+}
+
+.area-topics-container {
+  margin-top: 64px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.area-topic {
+  transition: all 0.3s ease;
+  padding: 16px;
+  border-radius: 8px;
+  border-left: 3px solid transparent;
+  opacity: 0;
+  transform: translateX(-20px);
+  animation: slideInLeft 0.6s ease forwards;
+}
+
+.area-topic:nth-child(1) {
+  animation-delay: 0.1s;
+}
+.area-topic:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.area-topic:nth-child(3) {
+  animation-delay: 0.3s;
+}
+.area-topic:nth-child(4) {
+  animation-delay: 0.4s;
+}
+
+.area-topic:hover {
+  background-color: #f8f9fa;
+  border-left-color: #c3a864;
+  transform: translateX(8px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.area-topic h3 {
+  display: flex;
+  margin-left: 0;
+  margin-bottom: 8px;
+  font-size: 20px;
+  transition: color 0.3s ease;
+}
+
+.area-topic:hover h3 {
+  color: #c3a864;
+}
+
+.area-topic p {
+  font-size: 16px;
+  margin-left: 16px;
+  transition: all 0.3s ease;
+}
+
+.area-topic:hover p {
+  margin-left: 24px;
+  color: #666;
+}
+
+.cta-container {
+  margin-top: 32px;
+  text-align: center;
+  padding: 32px;
+}
+
+.cta-container p {
+  font-size: 20px;
+  font-weight: 500;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  display: inline-block;
+  padding: 12px 24px;
+  border-radius: 30px;
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(135deg, #fff 0%, #f8f9fa 100%);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.cta-container p::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(195, 168, 100, 0.2),
+    transparent
+  );
+  transition: left 0.5s ease;
+}
+
+.cta-container p:hover {
+  color: #c3a864;
+  transform: translateY(-2px) scale(1.05);
+  box-shadow: 0 8px 25px rgba(195, 168, 100, 0.2);
+  cursor: pointer;
+}
+
+.cta-container p:hover::before {
+  left: 100%;
+}
+
+.cta-container p:active {
+  transform: translateY(0) scale(1.02);
+  transition: all 0.1s ease;
+}
+
+.cta-container p:focus {
+  outline: 2px solid #c3a864;
+  outline-offset: 4px;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInLeft {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    box-shadow: 0 0 0 0 rgba(195, 168, 100, 0.4);
+  }
+  50% {
+    box-shadow: 0 0 0 10px rgba(195, 168, 100, 0);
+  }
+}
+
+.scroll-indicator {
+  position: fixed;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 30px;
+  height: 50px;
+  border: 2px solid #c3a864;
+  border-radius: 15px;
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
+}
+
+.scroll-indicator::before {
+  content: "";
+  position: absolute;
+  top: 8px;
+  left: 50%;
+  width: 4px;
+  height: 8px;
+  background: #c3a864;
+  border-radius: 2px;
+  transform: translateX(-50%);
+  animation: scrollDown 2s infinite;
+}
+
+@keyframes scrollDown {
+  0% {
+    top: 8px;
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    top: 24px;
+    opacity: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .area-texts-container {
+    padding: 0 32px;
+    padding-top: 32px;
+  }
+
+  .services-container {
+    flex-direction: column;
+    gap: 32px;
+  }
+
+  .services-container .services-section {
+    width: 100%;
+  }
+}
