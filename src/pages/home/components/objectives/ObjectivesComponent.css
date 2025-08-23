@@ -1,8 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap');
-body{
+
+body {
     font-family: 'PT Serif', serif;
     margin: 0;
     padding: 0;
+    transition: background-color 0.3s ease;
 }
 
 .objectives-container {
@@ -13,6 +15,11 @@ body{
     margin-right: 64px;
     margin-top: 48px;
     gap: 88px;
+    transition: gap 0.3s ease;
+}
+
+.objectives-container:hover {
+    gap: 96px;
 }
 
 #objectives-box {
@@ -20,6 +27,42 @@ body{
     height: 353px;
     background-color: #1A1247;
     color: #fff;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+#objectives-box:hover {
+    transform: translateY(-8px) scale(1.02);
+    background-color: #241659;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+}
+
+#objectives-box:active {
+    transform: translateY(-4px) scale(1.01);
+    transition-duration: 0.15s;
+}
+
+#objectives-box:focus {
+    outline: 3px solid #C3A864;
+    outline-offset: 4px;
+}
+
+#objectives-box::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(195, 168, 100, 0.2), transparent);
+    transition: left 0.6s ease;
+}
+
+#objectives-box:hover::before {
+    left: 100%;
 }
 
 #title-container {
@@ -31,6 +74,12 @@ body{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    position: relative;
+    transition: background-color 0.3s ease;
+}
+
+#objectives-box:hover #title-container {
+    background-color: #3A2B91;
 }
 
 #img-container {
@@ -49,6 +98,18 @@ body{
     height: 36px;
     margin-top: 6px;
     display: block;
+    transition: all 0.3s ease;
+    position: relative;
+    z-index: 2;
+}
+
+#objectives-box:hover .mission-icon {
+    transform: scale(1.1);
+    filter: brightness(1.2);
+}
+
+#objectives-box:active .mission-icon {
+    transform: scale(1.05);
 }
 
 #title {
@@ -61,10 +122,49 @@ body{
     height: 48px;
     display: flex;
     align-items: center;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+#objectives-box:hover #title {
+    color: #E8DCC0;
+    transform: translateX(4px);
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+#objectives-box:focus #title {
+    color: #C3A864;
 }
 
 #description {
     margin: 24px 24px 24px;
     font-size: 16px;
     line-height: 1.5;
+    transition: all 0.3s ease;
+    opacity: 0.9;
+}
+
+#objectives-box:hover #description {
+    opacity: 1;
+    transform: translateY(-2px);
+    color: #F5F5F5;
+}
+
+#objectives-box:active #description {
+    transform: translateY(0);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+#objectives-box {
+    animation: fadeIn 0.6s ease-out;
 }
