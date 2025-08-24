@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 import homeImage from "../../assets/home-image.png";
 import aboutImage from "../../assets/about-image.jpg";
 import arrowLeft from "../../assets/arrow-left.svg";
@@ -9,6 +9,27 @@ import PostsComponent from "./components/posts/PostsComponent";
 import FormComponent from "./components/form/FormComponent";
 
 const HomeComponent = () => {
+  const workingAreasRef = useRef(null);
+  const aboutRef = useRef(null);
+
+  const scrollToWorkingAreas = () => {
+    const yOffset = -100; 
+    const y =
+      workingAreasRef.current.getBoundingClientRect().top +
+      window.pageYOffset +
+      yOffset;
+    window.scrollTo({ top: y, behavior: "smooth" });
+  };
+
+  const scrollToAbout = () => {
+    const yOffset = -120;
+    const y =
+      aboutRef.current.getBoundingClientRect().top +
+      window.pageYOffset +
+      yOffset;
+    window.scrollTo({ top: y, behavior: "smooth" });
+  };
+
   return (
     <div className="home-container">
       <img
@@ -25,16 +46,20 @@ const HomeComponent = () => {
         </h3>
       </div>
       <div className="button-container">
-        <button className="working-areas-button">
+        <button className="working-areas-button" onClick={scrollToWorkingAreas}>
           <img src={arrowLeft} alt="Seta para a esquerda" />
           ÁREAS DE ATUAÇÃO
         </button>
-        <button className="more-info-button">SAIBA MAIS</button>
+        <button className="more-info-button" onClick={scrollToAbout}>
+          SAIBA MAIS
+        </button>
       </div>
-      <div className="objectives-container">
+
+      <div ref={aboutRef} className="objectives-container">
         <ObjectivesComponent />
       </div>
-      <div className="about-container">
+
+      <div ref={aboutRef} className="about-container">
         <div className="about-texts">
           <h6>SOBRE O GRUPO</h6>
           <h1>Excelência jurídica que transforma problemas em soluções.</h1>
@@ -60,12 +85,15 @@ const HomeComponent = () => {
           <img src={aboutImage} alt="about image" />
         </div>
       </div>
-      <div className="working-areas-container">
+
+      <div ref={workingAreasRef} className="working-areas-container">
         <WorkingAreasComponent />
       </div>
+
       <div className="posts-container">
         <PostsComponent />
       </div>
+
       <div className="form-container">
         <FormComponent />
       </div>

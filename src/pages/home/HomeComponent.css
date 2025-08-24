@@ -9,7 +9,7 @@ button {
   display: flex;
   flex-direction: column;
   position: relative;
-  min-height: 100vh; /* Corrigido */
+  min-height: 100vh;
   overflow: visible;
 }
 .home-img {
@@ -17,12 +17,12 @@ button {
   top: 0;
   left: 0;
   width: 100%;
-  height: 593px;
+  height: 54.91vh;
   object-fit: cover;
   z-index: 1;
 }
 .texts-container {
-  padding-top: 120px;
+  padding-top: 6.25vw;
 }
 
 .texts-container span,
@@ -31,27 +31,27 @@ h3 {
   position: relative;
   z-index: 2;
   color: #000000;
-  margin-left: 128px;
-  gap: 16px;
+  margin-left: 6.67vw;
+  gap: 0.83vw;
 }
 
 .texts-container span {
-  letter-spacing: 8px;
-  font-size: 20px;
-  padding-top: 80px;
+  letter-spacing: 0.42vw;
+  font-size: 1.04vw;
+  padding-top: 4.17vw;
 }
 
 .texts-container h1 {
-  font-size: 32px;
+  font-size: 1.67vw;
   font-weight: 700;
   line-height: 1.2;
 }
 
 .texts-container h3 {
-  font-size: 20px;
+  font-size: 1.04vw;
   font-weight: 400;
   line-height: 1.5;
-  margin-top: 16px;
+  margin-top: 0.83vw;
 }
 
 .button-container {
@@ -59,9 +59,9 @@ h3 {
   z-index: 2;
   display: flex;
   flex-direction: row;
-  gap: 40px;
-  margin-left: 128px;
-  padding-top: 40px;
+  gap: 2.08vw;
+  margin-left: 6.67vw;
+  padding-top: 2.08vw;
 }
 
 .working-areas-button,
@@ -69,13 +69,13 @@ h3 {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 10px;
-  width: 168px;
-  height: 40px;
-  font-size: 12px;
+  gap: 0.52vw;
+  width: 8.75vw;
+  height: 2.08vw;
+  font-size: 0.625vw;
   cursor: pointer;
   transition: all 0.3s ease;
-  border-radius: 8px;
+  border-radius: 0.42vw;
 }
 
 .working-areas-button {
@@ -85,13 +85,13 @@ h3 {
 
 .working-areas-button:hover {
   background-color: #f3f3f3;
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transform: translateY(-0.10vw);
+  box-shadow: 0 0.21vw 0.63vw rgba(0, 0, 0, 0.1);
 }
 
 .working-areas-button:active {
   transform: scale(0.95);
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0.10vw 0.31vw rgba(0, 0, 0, 0.2);
 }
 
 .more-info-button {
@@ -102,7 +102,7 @@ h3 {
 .more-info-button:hover {
   background-color: black;
   color: #fff;
-  transform: translateY(-2px);
+  transform: translateY(-0.10vw);
 }
 
 .more-info-button:active {
@@ -115,11 +115,11 @@ h3 {
 }
 
 .about-container {
-  margin-top: 128px;
-  margin-left: 128px;
+  margin-top: 6.67vw;
+  margin-left: 6.67vw;
   display: flex;
   flex-direction: row;
-  gap: 152px;
+  gap: 7.92vw;
   position: relative;
   z-index: 2;
 }
@@ -127,33 +127,33 @@ h3 {
 .about-texts {
   display: flex;
   flex-direction: column;
-  gap: 16px;
-  width: 544px;
+  gap: 0.83vw;
+  width: 28.33vw;
 }
 
 .about-texts h6 {
-  font-size: 16px;
+  font-size: 0.83vw;
   font-weight: 700;
-  letter-spacing: 3px;
+  letter-spacing: 0.16vw;
   color: #c3a864;
-  margin: 0 0 8px 0;
+  margin: 0 0 0.42vw 0;
 }
 
 .about-texts h1 {
-  margin: 0 0 16px 0;
-  font-size: 32px;
+  margin: 0 0 0.83vw 0;
+  font-size: 1.67vw;
   font-weight: 700;
 }
 
 .about-texts p {
-  font-size: 16px;
+  font-size: 0.83vw;
 }
 
 .contact-info {
   display: flex;
   flex-direction: row;
-  gap: 8px;
-  font-size: 20px;
+  gap: 0.42vw;
+  font-size: 1.04vw;
   font-weight: 700;
   align-items: center;
   flex-wrap: nowrap;
@@ -162,9 +162,8 @@ h3 {
   transition: transform 0.3s ease, color 0.3s ease;
 }
 
-
 .contact-info:hover {
-  transform: translateX(4px);
+  transform: translateX(0.21vw);
   color: #c3a864;
 }
 
@@ -187,15 +186,15 @@ h3 {
 }
 
 .form-container {
-  margin-top: 64px;
+  margin-top: 3.33vw;
   position: relative;
   z-index: 2;
 }
 
 .posts-container {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    margin-top: 64px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  margin-top: 3.33vw;
 }

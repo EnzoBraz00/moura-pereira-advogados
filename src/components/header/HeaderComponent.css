@@ -8,8 +8,8 @@ body {
 
 .header-container {
     width: 100%;
-    height: 104px;
-    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    height: 11vh;
+    box-shadow: 0.1vw 0.2vh 1vh rgba(0, 0, 0, 0.1);
     background-color: #fff;
     position: relative;
     overflow: hidden;
@@ -17,7 +17,7 @@ body {
 }
 
 .header-container:hover {
-    box-shadow: 2px 4px 20px rgba(0, 0, 0, 0.15);
+    box-shadow: 0.1vw 0.4vh 2vh rgba(0, 0, 0, 0.15);
 }
 
 .header-container::before {
@@ -26,7 +26,7 @@ body {
     bottom: 0;
     left: -100%;
     width: 100%;
-    height: 2px;
+    height: 0.2vh;
     background: linear-gradient(90deg, transparent, #C3A864, transparent);
     transition: left 0.8s ease;
 }
@@ -36,7 +36,7 @@ body {
 }
 
 .header-top {
-    height: 24px;
+    height: 2.4vh;
     background-color: #1A1247;
     display: flex;
     align-items: center;
@@ -66,9 +66,9 @@ body {
 
 .header-top p {
     color: #fff;
-    font-size: 12px;
+    font-size: 0.63vw;
     font-weight: 700;
-    margin-left: 48px;
+    margin-left: 2.5vw;
     text-align: center;
     transition: all 0.3s ease;
     cursor: default;
@@ -78,26 +78,37 @@ body {
 
 .header-top p:hover {
     color: #C3A864;
-    transform: translateX(4px);
-    text-shadow: 0 1px 3px rgba(195, 168, 100, 0.3);
+    transform: translateX(0.21vw);
+    text-shadow: 0 0.1vh 0.3vh rgba(195, 168, 100, 0.3);
 }
 
 .header-content {
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    padding: 0 48px 0px 48px;
+    padding: 0 2.5vw 0 2.5vw;
     transition: padding 0.3s ease;
-}
-
-.header-container:hover .header-content {
-    padding: 0 52px 0px 52px;
+    position: relative;
+    justify-content: space-between;
+    height: 8vh;
 }
 
 .header-logo {
-    margin-top: 9px;
-    width: 140px;
-    height: 62px;
+    position: absolute;
+    left: 2.5vw;
+}
+
+.header-container:hover .header-content {
+    padding: 0 2.71vw 0 2.71vw;
+}
+
+.header-container:hover .header-logo {
+    left: 2.71vw;
+}
+
+.header-logo {
+    margin-top: 0.9vh;
+    width: 7.29vw;
+    height: 6.2vh;
     cursor: pointer;
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     position: relative;
@@ -114,36 +125,36 @@ body {
 }
 
 .header-logo:focus {
-    outline: 3px solid #C3A864;
-    outline-offset: 4px;
-    border-radius: 4px;
+    outline: 0.16vw solid #C3A864;
+    outline-offset: 0.21vw;
+    border-radius: 0.21vw;
 }
 
 .header-quick-access {
     display: flex;
-    gap: 40px;
+    gap: 2.08vw;
     transition: gap 0.3s ease;
 }
 
 .header-quick-access:hover {
-    gap: 48px;
+    gap: 2.5vw;
 }
 
 .header-link {
     position: relative;
     color: #000;
     font-weight: 700;
-    font-size: 24px;
+    font-size: 1.25vw;
     text-decoration: none;
     transition: all 0.3s ease;
-    padding: 8px 12px;
-    border-radius: 4px;
+    padding: 0.8vh 0.63vw;
+    border-radius: 0.21vw;
     overflow: hidden;
 }
 
 .header-link:hover {
     color: #1A1247;
-    transform: translateY(-2px);
+    transform: translateY(-0.2vh);
     background-color: rgba(195, 168, 100, 0.05);
 }
 
@@ -153,22 +164,22 @@ body {
 }
 
 .header-link:focus {
-    outline: 2px solid #C3A864;
-    outline-offset: 2px;
+    outline: 0.1vw solid #C3A864;
+    outline-offset: 0.1vw;
 }
 
 .header-link::after {
     content: '';
     display: block;
-    height: 3px;
+    height: 0.3vh;
     width: 100%;
     background: #C3A864;
     opacity: 0.3;
     position: absolute;
     left: 0;
-    bottom: -4px;
+    bottom: -0.4vh;
     transition: all 0.3s ease;
-    border-radius: 2px;
+    border-radius: 0.1vw;
     transform: scaleX(0);
     transform-origin: left;
 }
@@ -176,9 +187,9 @@ body {
 .header-link:hover::after {
     opacity: 1;
     transform: scaleX(1);
-    height: 4px;
-    bottom: -5px;
-    box-shadow: 0 2px 8px rgba(195, 168, 100, 0.4);
+    height: 0.4vh;
+    bottom: -0.5vh;
+    box-shadow: 0 0.2vh 0.8vh rgba(195, 168, 100, 0.4);
 }
 
 .header-link::before {
@@ -200,7 +211,7 @@ body {
 @keyframes slideDown {
     from {
         opacity: 0;
-        transform: translateY(-20px);
+        transform: translateY(-2vh);
     }
     to {
         opacity: 1;
@@ -224,36 +235,60 @@ body {
 @media (max-width: 768px) {
     .header-container {
         height: auto;
-        min-height: 104px;
+        min-height: 15vh;
     }
     
     .header-content {
         flex-direction: column;
-        padding: 16px 24px;
-        gap: 16px;
+        padding: 2vh 5vw;
+        gap: 2vh;
     }
     
     .header-quick-access {
         flex-wrap: wrap;
         justify-content: center;
-        gap: 24px;
+        gap: 5vw;
     }
     
     .header-quick-access:hover {
-        gap: 28px;
+        gap: 6vw;
     }
     
     .header-link {
-        font-size: 20px;
+        font-size: 4vw;
+        padding: 1.5vh 3vw;
     }
     
     .header-top p {
-        margin-left: 24px;
-        font-size: 11px;
+        margin-left: 5vw;
+        font-size: 3vw;
     }
     
     .header-logo {
-        width: 120px;
-        height: 53px;
+        position: static;
+        margin-top: 1vh;
+        width: 25vw;
+        height: 10vh;
+    }
+
+    .header-link::after {
+        height: 0.5vh;
+        bottom: -0.7vh;
+    }
+
+    .header-link:hover::after {
+        height: 0.7vh;
+        bottom: -0.8vh;
+    }
+
+    @keyframes slideDown {
+        from {
+            opacity: 0;
+            transform: translateY(-3vh);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
     }
 }

@@ -6,86 +6,86 @@
 }
 
 .working-areas-component {
-    margin-top: 48px;
+    margin-top: 2.5vh;
     width: 100%;
-    min-height: 400px;
+    min-height: max(31vw, 30vh);
     height: auto;
     background-color: #1A1247;
     text-align: center;
-    padding-bottom: 48px;
+    padding-bottom: 2.5vh;
 }
 
 .working-areas-component h5{
-    font-size: 16px;
+    font-size: 0.83vw;
     font-weight: 700;
     color: #C3A864;
-    padding-top: 64px;
-    letter-spacing: 3px;
+    padding-top: 3.33vh;
+    letter-spacing: 0.16vw;
 }
 
 .working-areas-component h2{
-    font-size: 32px;
+    font-size: 1.67vw;
     font-weight: 700;
     color: #FFFFFF;
-    margin-bottom: 32px;
+    margin-bottom: 2.67vh;
 }
 
 .working-areas-list {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 40px 60px; 
+    gap: 4.08vh 3.12vw;
     width: 100%;
     margin: 0 auto;
-    max-width: 1100px;
+    max-width: 57.29vw;
 }
 
 .working-areas-item {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 16px;
-    width: 300px;
-    flex: 0 1 300px;
-    padding: 24px 12px;
-    border-radius: 16px;
+    gap: 0.83vh;
+    width: 15.62vw;
+    flex: 0 1 15.62vw;
+    padding: 1.25vh 0.62vw;
+    border-radius: 0.83vw;
     transition: transform 0.2s, box-shadow 0.2s, background 0.2s;
     background: rgba(255,255,255,0.01);
-    box-shadow: 0 2px 8px 0 rgba(44,31,118,0.04);
+    box-shadow: 0 0.10vh 0.42vw 0 rgba(44,31,118,0.04);
     cursor: pointer;
     position: relative;
 }
 
 .working-areas-item:hover {
-    transform: translateY(-8px) scale(1.04);
-    box-shadow: 0 8px 24px 0 rgba(195,168,100,0.18);
+    transform: translateY(-0.42vh) scale(1.04);
+    box-shadow: 0 0.42vh 1.25vw 0 rgba(195,168,100,0.18);
     background: rgba(195,168,100,0.08);
 }
 
 .working-areas-item img {
-    width: 36px;
-    height: 36px;
-    margin-bottom: 8px;
+    width: 1.88vw;
+    height: 1.88vw;
+    margin-bottom: 0.42vh;
     transition: filter 0.2s;
 }
 
 .working-areas-item:hover img {
-    filter: drop-shadow(0 0 8px #C3A86488);
+    filter: drop-shadow(0 0 0.42vh #C3A86488);
 }
 
 .working-areas-item h6 {
-    font-size: 20px;
+    font-size: 1.04vw;
     font-weight: 700;
     color: #C3A864;
-    letter-spacing: 2px;
+    letter-spacing: 0.10vw;
     margin: 0;
 }
 
 .working-areas-item .line {
-    width: 48px;
-    height: 2px;
+    width: 2.5vw;
+    height: 0.10vh;
     background-color: #C3A864;
-    margin: 0 auto 8px auto;
+    margin: 0 auto 0.42vh auto;
     opacity: 0.3;
     transition: opacity 0.2s;
 }
@@ -95,10 +95,10 @@
 }
 
 .working-areas-item p {
-    font-size: 15px;
+    font-size: 0.78vw;
     color: #fff;
     text-align: center;
     line-height: 1.5;
     margin: 0;
-    margin-top: 8px;
+    margin-top: 0.42vh;
 }
