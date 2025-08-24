@@ -8,7 +8,7 @@
 
 .form-component {
   width: 100%;
-  height: 715px;
+  height: 71.5vh;
   background-color: #1a1247;
   display: flex;
   flex-direction: row;
@@ -28,33 +28,33 @@
   display: flex;
   justify-content: center;
   flex-direction: column;
-  gap: 24px;
+  gap: 2.4vh;
   transition: gap 0.3s ease;
 }
 
 .form-content:hover {
-  gap: 28px;
+  gap: 2.8vh;
 }
 
 .form-content h2 {
-  font-size: 40px;
+  font-size: 2.08vw;
   font-weight: 700;
   color: #c3a864;
-  margin-top: 64px;
-  margin-left: 64px;
+  margin-top: 6.4vh;
+  margin-left: 3.33vw;
   transition: all 0.3s ease;
   cursor: default;
 }
 
 .form-content h2:hover {
   color: #d4b875;
-  transform: translateX(8px);
-  text-shadow: 0 2px 8px rgba(195, 168, 100, 0.3);
+  transform: translateX(0.42vw);
+  text-shadow: 0 0.2vh 0.8vh rgba(195, 168, 100, 0.3);
 }
 
 .form-content h4 {
-  font-size: 24px;
-  margin-left: 64px;
+  font-size: 1.25vw;
+  margin-left: 3.33vw;
   font-weight: 400;
   color: #fff;
   transition: all 0.3s ease;
@@ -63,35 +63,35 @@
 
 .form-content h4:hover {
   color: #f0f0f0;
-  transform: translateX(4px);
+  transform: translateX(0.21vw);
 }
 
 .form-input {
-  width: 554px;
-  height: 40px;
+  width: 28.85vw;
+  height: 4vh;
   background-color: #fff;
-  border-radius: 2px;
-  margin-left: 64px;
+  border-radius: 0.1vw;
+  margin-left: 3.33vw;
   display: flex;
   align-items: center;
   transition: all 0.3s ease;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0.2vh 0.4vh rgba(0, 0, 0, 0.1);
   position: relative;
   overflow: hidden;
 }
 
 .form-input:hover {
   background-color: #f8f8f8;
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transform: translateY(-0.2vh);
+  box-shadow: 0 0.4vh 1.2vh rgba(0, 0, 0, 0.15);
 }
 
 .form-input:focus-within {
   background-color: #fff;
-  transform: translateY(-3px);
-  box-shadow: 0 6px 20px rgba(195, 168, 100, 0.2);
-  outline: 2px solid #c3a864;
-  outline-offset: 2px;
+  transform: translateY(-0.3vh);
+  box-shadow: 0 0.6vh 2vh rgba(195, 168, 100, 0.2);
+  outline: 0.1vw solid #c3a864;
+  outline-offset: 0.1vw;
 }
 
 .form-input::before {
@@ -115,9 +115,9 @@
 }
 
 .input-icon {
-  width: 24px;
-  height: 24px;
-  margin-left: 8px;
+  width: 1.25vw;
+  height: 2.4vh;
+  margin-left: 0.42vw;
   transition: all 0.3s ease;
   position: relative;
   z-index: 2;
@@ -135,10 +135,10 @@
 
 .input-field {
   flex: 1;
-  height: 40px;
+  height: 4vh;
   border: none;
-  padding-left: 4px;
-  font-size: 16px;
+  padding-left: 0.21vw;
+  font-size: 0.83vw;
   position: relative;
   z-index: 2;
 }
@@ -148,8 +148,8 @@
   height: 100%;
   border: none;
   outline: none;
-  padding-left: 4px;
-  font-size: 16px;
+  padding-left: 0.21vw;
+  font-size: 0.83vw;
   background: transparent;
   box-sizing: border-box;
   transition: all 0.3s ease;
@@ -167,52 +167,52 @@
 
 .input-field input:focus::placeholder {
   color: #ccc;
-  transform: translateX(4px);
+  transform: translateX(0.21vw);
 }
 
 .contact-form {
   display: flex;
-  gap: 24px;
+  gap: 2.4vh;
   flex-direction: column;
 }
 
 .inputs-container {
   display: flex;
   flex-direction: row;
-  margin-left: 64px;
-  gap: 16px;
+  margin-left: 3.33vw;
+  gap: 0.83vw;
   transition: gap 0.3s ease;
 }
 
 .inputs-container:hover {
-  gap: 20px;
+  gap: 1.04vw;
 }
 
 .form-input-small {
-  width: 269px;
-  height: 40px;
+  width: 14.01vw;
+  height: 4vh;
   background-color: #fff;
-  border-radius: 2px;
+  border-radius: 0.1vw;
   display: flex;
   align-items: center;
   transition: all 0.3s ease;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0.2vh 0.4vh rgba(0, 0, 0, 0.1);
   position: relative;
   overflow: hidden;
 }
 
 .form-input-small:hover {
   background-color: #f8f8f8;
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transform: translateY(-0.2vh);
+  box-shadow: 0 0.4vh 1.2vh rgba(0, 0, 0, 0.15);
 }
 
 .form-input-small:focus-within {
   background-color: #fff;
-  transform: translateY(-3px);
-  box-shadow: 0 6px 20px rgba(195, 168, 100, 0.2);
-  outline: 2px solid #c3a864;
-  outline-offset: 2px;
+  transform: translateY(-0.3vh);
+  box-shadow: 0 0.6vh 2vh rgba(195, 168, 100, 0.2);
+  outline: 0.1vw solid #c3a864;
+  outline-offset: 0.1vw;
 }
 
 .form-input-small::before {
@@ -236,31 +236,31 @@
 }
 
 .form-input-big {
-  margin-left: 64px;
-  width: 554px;
-  height: 176px;
+  margin-left: 3.33vw;
+  width: 28.85vw;
+  height: 17.6vh;
   background-color: #fff;
-  border-radius: 2px;
+  border-radius: 0.1vw;
   display: flex;
   align-items: flex-start;
   transition: all 0.3s ease;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0.2vh 0.4vh rgba(0, 0, 0, 0.1);
   position: relative;
   overflow: hidden;
 }
 
 .form-input-big:hover {
   background-color: #f8f8f8;
-  transform: translateY(-3px);
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+  transform: translateY(-0.3vh);
+  box-shadow: 0 0.6vh 1.6vh rgba(0, 0, 0, 0.15);
 }
 
 .form-input-big:focus-within {
   background-color: #fff;
-  transform: translateY(-4px);
-  box-shadow: 0 8px 24px rgba(195, 168, 100, 0.2);
-  outline: 2px solid #c3a864;
-  outline-offset: 2px;
+  transform: translateY(-0.4vh);
+  box-shadow: 0 0.8vh 2.4vh rgba(195, 168, 100, 0.2);
+  outline: 0.1vw solid #c3a864;
+  outline-offset: 0.1vw;
 }
 
 .form-input-big::before {
@@ -286,7 +286,7 @@
 .form-input-big .input-field {
   flex: 1;
   height: 100%;
-  padding-left: 8px;
+  padding-left: 0.42vw;
   display: flex;
   position: relative;
   z-index: 2;
@@ -298,10 +298,10 @@
   border: none;
   outline: none;
   resize: none;
-  font-size: 16px;
+  font-size: 0.83vw;
   background: transparent;
   box-sizing: border-box;
-  padding: 16px 8px 8px 8px;
+  padding: 1.6vh 0.42vw 0.8vh 0.42vw;
   transition: all 0.3s ease;
 }
 
@@ -329,13 +329,13 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 138px;
-  height: 40px;
+  width: 7.19vw;
+  height: 4vh;
   color: #fff;
   background-color: #c3a864;
-  border-radius: 4px;
-  box-shadow: 0 2px 12px 0 rgba(44, 31, 118, 0.06);
-  font-size: 20px;
+  border-radius: 0.21vw;
+  box-shadow: 0 0.2vh 1.2vh 0 rgba(44, 31, 118, 0.06);
+  font-size: 1.04vw;
   font-weight: 700;
   border: none;
   text-align: center;
@@ -347,8 +347,8 @@
 
 .send-button:hover {
   background-color: #d4b875;
-  transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(44, 31, 118, 0.15);
+  transform: translateY(-0.2vh);
+  box-shadow: 0 0.6vh 2vh rgba(44, 31, 118, 0.15);
 }
 
 .send-button:active {
@@ -358,8 +358,8 @@
 }
 
 .send-button:focus {
-  outline: 3px solid rgba(195, 168, 100, 0.4);
-  outline-offset: 2px;
+  outline: 0.16vw solid rgba(195, 168, 100, 0.4);
+  outline-offset: 0.1vw;
 }
 
 .send-button::before {
@@ -385,7 +385,7 @@
 @keyframes fadeInUp {
   from {
     opacity: 0;
-    transform: translateY(30px);
+    transform: translateY(3vh);
   }
   to {
     opacity: 1;
@@ -411,7 +411,7 @@
 
   .form-component img {
     max-width: 100%;
-    height: 300px;
+    height: 30vh;
     object-fit: cover;
   }
 
@@ -419,22 +419,39 @@
   .form-content h4,
   .form-input,
   .form-input-big {
-    margin-left: 24px;
-    margin-right: 24px;
+    margin-left: 5vw;
+    margin-right: 5vw;
   }
 
   .form-input,
   .form-input-big {
-    width: calc(100% - 48px);
+    width: calc(100% - 10vw);
   }
 
   .inputs-container {
     flex-direction: column;
-    margin-left: 24px;
-    margin-right: 24px;
+    margin-left: 5vw;
+    margin-right: 5vw;
   }
 
   .form-input-small {
     width: 100%;
+  }
+
+  .form-content h2 {
+    font-size: 8vw;
+  }
+
+  .form-content h4 {
+    font-size: 4vw;
+  }
+
+  .input-field input,
+  .form-input-big .input-field textarea {
+    font-size: 3.5vw;
+  }
+
+  .send-button {
+    font-size: 4vw;
   }
 }

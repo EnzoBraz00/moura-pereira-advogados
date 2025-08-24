@@ -11,43 +11,43 @@ body {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    margin-left: 64px;
-    margin-right: 64px;
-    margin-top: 48px;
-    gap: 88px;
+    margin-left: 3.33vw;
+    margin-right: 3.33vw;
+    margin-top: 4.8vh;
+    gap: 4.58vw;
     transition: gap 0.3s ease;
 }
 
 .objectives-container:hover {
-    gap: 96px;
+    gap: 5vw;
 }
 
 #objectives-box {
-    width: 328px;
-    height: 353px;
+    width: 17.08vw;
+    height: 35.3vh;
     background-color: #1A1247;
     color: #fff;
     cursor: pointer;
     position: relative;
     overflow: hidden;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0.4vh 0.8vh rgba(0, 0, 0, 0.2);
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 #objectives-box:hover {
-    transform: translateY(-8px) scale(1.02);
+    transform: translateY(-0.8vh) scale(1.02);
     background-color: #241659;
-    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 1.2vh 2.4vh rgba(0, 0, 0, 0.3);
 }
 
 #objectives-box:active {
-    transform: translateY(-4px) scale(1.01);
+    transform: translateY(-0.4vh) scale(1.01);
     transition-duration: 0.15s;
 }
 
 #objectives-box:focus {
-    outline: 3px solid #C3A864;
-    outline-offset: 4px;
+    outline: 0.16vw solid #C3A864;
+    outline-offset: 0.21vw;
 }
 
 #objectives-box::before {
@@ -70,7 +70,7 @@ body {
     flex-direction: row;
     align-items: center;
     background-color: #2C1F76;
-    height: 48px;
+    height: 4.8vh;
     padding: 0;
     margin: 0;
     box-sizing: border-box;
@@ -78,13 +78,17 @@ body {
     transition: background-color 0.3s ease;
 }
 
+#title-container h2 {
+    font-size: 1.25vw;
+}
+
 #objectives-box:hover #title-container {
     background-color: #3A2B91;
 }
 
 #img-container {
-    width: 48px;
-    height: 48px;
+    width: 2.5vw;
+    height: 4.8vh;
     background-color: #C3A864;
     display: flex;
     align-items: center;
@@ -93,10 +97,15 @@ body {
     padding: 0;
 }
 
+.vision-image {
+    width: 17.083vw;
+    height: 16.1vh;
+}
+
 .mission-icon {
-    width: 36px;
-    height: 36px;
-    margin-top: 6px;
+    width: 1.875vw;
+    height: 3.6vh;
+    margin-top: 0.6vh;
     display: block;
     transition: all 0.3s ease;
     position: relative;
@@ -114,12 +123,12 @@ body {
 
 #title {
     text-align: center;
-    margin-left: 32px;
+    margin-left: 1.67vw;
     margin-top: 0;
     margin-bottom: 0;
     font-size: 1.5rem;
-    line-height: 48px;
-    height: 48px;
+    line-height: 4.8vh;
+    height: 4.8vh;
     display: flex;
     align-items: center;
     transition: all 0.3s ease;
@@ -128,8 +137,8 @@ body {
 
 #objectives-box:hover #title {
     color: #E8DCC0;
-    transform: translateX(4px);
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    transform: translateX(0.21vw);
+    text-shadow: 0 0.2vh 0.4vh rgba(0, 0, 0, 0.3);
 }
 
 #objectives-box:focus #title {
@@ -137,8 +146,8 @@ body {
 }
 
 #description {
-    margin: 24px 24px 24px;
-    font-size: 16px;
+    margin: 2.4vh 1.25vw 2.4vh;
+    font-size: 0.833vw;
     line-height: 1.5;
     transition: all 0.3s ease;
     opacity: 0.9;
@@ -146,7 +155,7 @@ body {
 
 #objectives-box:hover #description {
     opacity: 1;
-    transform: translateY(-2px);
+    transform: translateY(-0.2vh);
     color: #F5F5F5;
 }
 
@@ -157,7 +166,7 @@ body {
 @keyframes fadeIn {
     from {
         opacity: 0;
-        transform: translateY(20px);
+        transform: translateY(2vh);
     }
     to {
         opacity: 1;
