@@ -36,7 +36,7 @@
   font-weight: 400;
 }
 
-.posts-container {
+.blog-posts-container {
   display: flex;
   flex-direction: row;
   gap: 1.67vw;
@@ -283,95 +283,264 @@
   font-size: 0.833vw;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 834px) {
   .blog-component {
-    margin-top: 5vh;
+    margin-top: 72px;
+    padding: 0 20px;
   }
 
   .title-texts h6 {
-    font-size: 3vw;
-    letter-spacing: 1vw;
+    font-size: 14px;
+    letter-spacing: 2px;
   }
 
   .title-texts h1 {
-    font-size: 6vw;
+    font-size: 28px;
   }
 
   .title-texts h3 {
-    font-size: 4.5vw;
+    font-size: 18px;
   }
 
-  .posts-container {
-    flex-direction: column;
-    gap: 4vh;
-    max-width: 90vw;
+  .blog-posts-container {
+    flex-direction: column-reverse;
+    gap: 24px;
+    max-width: 100%;
+    margin-top: 32px;
+  }
+
+  .posts-list {
+    margin-top: 0;
+    gap: 24px;
   }
 
   .post {
-    width: 90vw;
+    width: 100%;
     max-height: none;
+    border-radius: 12px;
   }
 
   .post img {
-    width: 90vw;
-    height: 25vh;
+    width: 100%;
+    height: 280px;
+    padding: 16px;
+    object-fit: cover;
   }
 
   .post h2 {
-    font-size: 4.5vw;
-    padding: 0 5vw;
+    font-size: 20px;
+    padding: 0 16px;
+    margin-bottom: 8px;
   }
 
   .post p {
-    font-size: 3.5vw;
-    padding: 0 5vw 3vh 5vw;
+    font-size: 14px;
+    padding: 0 16px 16px 16px;
   }
 
-  .search-container {
-    align-items: center;
-  }
-
-  .header-title {
-    font-size: 4.5vw;
-  }
-
-  .search-input-group {
-    width: 70vw;
-    height: 6vh;
-  }
-
-  .search-input-group input {
-    font-size: 3.5vw;
-    padding-left: 4vw;
-  }
-
-  .tags-list {
-    width: 80vw;
-    justify-content: center;
+  .post-tags {
+    gap: 8px;
+    padding: 0 16px;
+    margin-bottom: 16px;
   }
 
   .tag {
-    height: 5vh;
-    padding: 0 4vw;
-    border-radius: 2.5vh;
-    font-size: 3vw;
+    font-size: 12px;
+    height: 32px;
+    padding: 0 12px;
+    border-radius: 16px;
+  }
+
+  .search-container {
+    margin-top: 32px;
+    gap: 16px;
+    width: 100%;
+    margin-bottom: 16px;
+  }
+
+  .header-line {
+    width: 2px;
+    height: 24px;
+  }
+
+  .header-title {
+    font-size: 18px;
+  }
+
+  .search-input-group {
+    width: 100%;
+    max-width: 300px;
+    height: 48px;
+    border-radius: 8px;
+    margin-top: 8px;
+  }
+
+  .search-input-group input {
+    font-size: 14px;
+    padding-left: 16px;
+  }
+
+  .search-input-group button {
+    padding-right: 16px;
+  }
+
+  .tags-header,
+  .tags-list {
+    display: none;
+  }
+
+  .recent-posts-header,
+  .recent-posts-list {
+    display: none;
   }
 
   .recent-posts-list {
-    max-width: 90vw;
+    max-width: 100%;
+    gap: 16px;
+    margin-top: 16px;
   }
 
   .recent-post {
-    padding: 2vh;
-    border-radius: 2vw;
+    gap: 12px;
+    padding: 12px;
+    border-radius: 8px;
   }
 
   .recent-post img {
-    width: 15vw;
-    height: 12vh;
+    width: 80px;
+    height: 60px;
+    border-radius: 8px;
   }
 
   .recent-post h2 {
-    font-size: 3.5vw;
+    font-size: 14px;
+  }
+
+  .recent-posts-info p {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 434px) {
+  .blog-component {
+    margin-top: 72px;
+    padding: 0 16px;
+  }
+
+  .title-texts {
+    gap: 12px;
+  }
+
+  .title-texts h6 {
+    font-size: 12px;
+    letter-spacing: 1px;
+  }
+
+  .title-texts h1 {
+    font-size: 20px;
+    line-height: 1.2;
+  }
+
+  .title-texts h3 {
+    font-size: 14px;
+    line-height: 1.4;
+  }
+
+  .blog-posts-container {
+    gap: 20px;
+    margin-top: 24px;
+    flex-direction: column-reverse;
+  }
+
+  /* Remover ordenação personalizada - usar column-reverse natural */
+  .search-container {
+    margin-top: 16px;
+    margin-bottom: 12px;
+    gap: 12px;
+  }
+
+  .search-header {
+    gap: 8px;
+    justify-content: flex-start;
+  }
+
+  .header-line {
+    width: 2px;
+    height: 20px;
+  }
+
+  .header-title {
+    font-size: 16px;
+  }
+
+  .search-input-group {
+    width: 100%;
+    height: 44px;
+    border-radius: 6px;
+    margin-top: 6px;
+  }
+
+  .search-input-group input {
+    font-size: 12px;
+    padding-left: 12px;
+  }
+
+  .search-input-group button {
+    padding-right: 12px;
+  }
+
+  /* Ocultar tags e posts recentes */
+  .tags-header,
+  .tags-list,
+  .recent-posts-header,
+  .recent-posts-list {
+    display: none;
+  }
+
+  .posts-list {
+    gap: 20px;
+  }
+
+  .post {
+    border-radius: 8px;
+  }
+
+  .post img {
+    height: 200px;
+    padding: 12px;
+  }
+
+  .post h2 {
+    font-size: 16px;
+    padding: 0 12px;
+    margin-bottom: 6px;
+  }
+
+  .post p {
+    font-size: 12px;
+    padding: 0 12px 12px 12px;
+    line-height: 1.5;
+  }
+
+  .post-tags {
+    gap: 6px;
+    padding: 0 12px;
+    margin-bottom: 12px;
+    flex-wrap: wrap;
+  }
+
+  .tag {
+    font-size: 10px;
+    height: 28px;
+    padding: 0 10px;
+    border-radius: 14px;
+  }
+
+  /* Ocultar posts recentes no mobile para economia de espaço */
+  .tags-header,
+  .tags-list,
+  .recent-posts-header,
+  .recent-posts-list {
+    display: none;
   }
 }

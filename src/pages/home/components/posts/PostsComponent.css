@@ -11,6 +11,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 100%;
 }
 
 .posts-component h5 {
@@ -33,9 +34,9 @@
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
-  align-items: flex-start;
+  align-items: center;
   gap: 1.667vw;
-  width: 62.5vw;
+  width: 90%;
   margin: 0 auto 3.667vh auto;
 }
 
@@ -139,4 +140,92 @@
 .posts-button:active {
   transform: scale(0.96);
   box-shadow: 0 0.156vw 0.417vw rgba(44, 31, 118, 0.2);
+}
+
+@media (max-width: 834px) {
+  .posts-component .posts-subtitle {
+    font-size: 12px;
+  }
+
+  .posts-component .posts-title {
+    font-size: 20px;
+  }
+  .posts-container .post-list {
+    width: 100%;
+    margin: 0 auto 1.667vh auto;
+  }
+  .post-item {
+    width: 160px;
+  }
+
+  .posts-button {
+    width: 200px;
+    height: 40px;
+    margin-top: 0px;
+    font-size: 12px;
+    border-radius: 8px;
+  }
+}
+
+@media (max-width: 440px) {
+  .posts-component {
+    display: flex;
+    justify-content: center;
+    margin-left: 34px;
+    width: 100%;
+  }
+
+  .posts-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  .posts-component .posts-subtitle {
+    font-size: 12px;
+  }
+
+  .posts-component .posts-title {
+    font-size: 16px;
+  }
+
+  .posts-container .posts-list {
+    width: 95%;
+    gap: 16px;
+  }
+
+  .posts-list {
+    flex-direction: column;
+  }
+
+  .post-item {
+    width: 90%;
+    height: auto;
+  }
+  .posts-button {
+    width: 180px;
+    height: 36px;
+    font-size: 12px;
+    border-radius: 6px;
+  }
+
+  .post-item h4 {
+    font-size: 12px;
+  }
+
+  .post-item p {
+    font-size: 8px;
+    padding-bottom: 8px;
+  }
+  .post-specs {
+    padding-top: 8px;
+  }
+  .post-specs img {
+    width: 24px;
+    height: 24px;
+  }
+  .post-item span {
+    font-size: 10px;
+  }
 }

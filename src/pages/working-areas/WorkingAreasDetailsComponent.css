@@ -327,7 +327,7 @@ body {
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 834px) {
   .area-texts-container {
     padding: 0 5vw;
     padding-top: 5vh;
@@ -343,30 +343,30 @@ body {
   }
 
   .area-title-container h1 {
-    font-size: 6vw;
-    padding: 4vw;
+    font-size: 5vw;
+    padding: 3vw;
   }
 
   .area-texts-container .area-description {
-    font-size: 4vw;
-    margin-top: 5vh;
+    font-size: 3vw;
+    margin-top: 4vh;
   }
 
   .services-section h2 {
-    font-size: 5vw;
+    font-size: 4vw;
   }
 
   .area-topic h3 {
-    font-size: 4.5vw;
-  }
-
-  .area-topic p {
     font-size: 3.5vw;
   }
 
+  .area-topic p {
+    font-size: 2.5vw;
+  }
+
   .cta-container p {
-    font-size: 4vw;
-    padding: 2vh 4vw;
+    font-size: 3vw;
+    padding: 1vh 3vw;
   }
 
   .scroll-indicator {
