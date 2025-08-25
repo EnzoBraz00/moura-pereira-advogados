@@ -224,9 +224,9 @@
   animation-delay: 0.4s;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 834px) {
   .footer-contents {
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
     text-align: center;
     padding: 0 1.25vw;
@@ -248,9 +248,12 @@
   .adress {
     justify-content: center;
     width: 100%;
-    max-width: 20.83vw;
     gap: 1vw;
     padding: 1vh 1.25vw;
+  }
+
+  .adress a {
+    font-size: 12px;
   }
 
   .adress:hover {
@@ -258,12 +261,26 @@
   }
 
   .adress img {
-    width: 2.5vw;
-    height: 2.5vh;
+    width: 3.5vw;
+    height: 3.5vh;
   }
 
   .footer-container p {
     margin-top: 2.4vh;
     padding: 0 1.25vw;
+    font-size: 8px;
+  }
+}
+
+@media (max-width: 440px) {
+  .footer-contents{
+    flex-direction: column;
+  }
+  .adress a {
+    font-size: 8px;
+  }
+
+  .footer-wrapper button {
+    margin-top: 8px;
   }
 }

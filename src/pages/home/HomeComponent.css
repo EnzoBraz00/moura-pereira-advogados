@@ -149,6 +149,11 @@ h3 {
   font-size: 0.83vw;
 }
 
+.about-image img{
+  width: 24.167vw;
+  height: 53.8vh;
+}
+
 .contact-info {
   display: flex;
   flex-direction: row;
@@ -196,5 +201,147 @@ h3 {
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  margin-top: 3.33vw;
+}
+
+@media (max-width: 834px) {
+  .home-img {
+    margin-top: 35px;
+    height: 30.9375vw;
+  }
+
+  .texts-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .texts-container span {
+    font-size: 16px;
+  }
+
+  .texts-container h1 {
+    font-size: 24px;
+  }
+
+  .texts-container h3 {
+    font-size: 16px;
+    width: 50%;
+  }
+
+  .working-areas-button,
+  .more-info-button {
+    margin-top: 10px;
+    width: 120px;
+    height: 36px;
+    font-size: 10px
+  }
+
+  .working-areas-button img {
+    display: none;
+  }
+
+  .about-container {
+    display: flex;
+    justify-content: space-between;
+    margin-right: 60px;
+    margin-bottom: 32px;
+  }
+
+  .about-texts{
+    width: 60%;
+  }
+  .about-texts h6{
+    font-size: 16px;
+  }
+  
+  .about-texts h1 {
+    font-size: 24px;
+  }
+
+  .about-texts p {
+    font-size: 12px;
+  }
+
+  .about-image img {
+    height: 340px;
+    width: 250px;
+  }
+}
+
+@media (max-width: 440px){
+  .home-img {
+    display: none;
+  }
+
+  .texts-container {
+    background-color: #EEF3F9;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 24px;
+  }
+
+  .texts-container span {
+    font-size: 12px;
+    text-align: center;
+  }
+
+  .texts-container h1 {
+    margin-top: 8px;
+    font-size: 16px;
+    text-align: center;
+  }
+
+  .texts-container h3 {
+    font-size: 12x;
+    width: 90%;
+  }
+
+  .button-container {
+    background-color: #EEF3F9;
+    width: 100%;
+    justify-content: center;
+    margin: 0 auto;
+    padding: 20px 0 24px;
+  }
+
+  .about-container {
+    flex-direction: column;
+    margin-right: 0;
+    margin-bottom: 0;
+  }
+
+  .about-texts{
+    width: 90%;
+    
+  }
+  .about-texts h6{
+    font-size: 12px;
+    text-align: center;
+  }
+  
+  .about-texts h1 {
+    font-size: 16px;
+    text-align: center;
+  }
+
+  .about-texts p {
+    margin-top: 16px;
+    font-size: 12px;
+  }
+
+  .contact-info {
+    justify-content: center;
+    gap: 8px;
+  }
+  .contact-info h3 {
+    text-align: center;
+    margin-top: 8px;
+    font-size: 12px;
+  }
+
+  .about-container img {
+    display: none;
+  }
+  
 }

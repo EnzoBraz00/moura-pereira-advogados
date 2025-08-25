@@ -27,7 +27,7 @@ const FormComponent = () => {
             </div>
           </div>
           <div className="inputs-container">
-            <div className="form-input-small">
+            <div className="form-input-small phone-input">
               <img
                 src={InputPhoneIcon}
                 alt="Phone Icon"

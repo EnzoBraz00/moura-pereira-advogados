@@ -403,16 +403,32 @@
   animation: fadeInUp 0.8s ease-out;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 834px) {
   .form-component {
     flex-direction: column;
     height: auto;
+  }
+
+  .buttons-container {
+    justify-content: flex-end;
+    width: 95%;
+    padding-bottom: 24px;
+  }
+
+  .buttons-container button {
+    width: 120px;
+    height: 40px;
+    font-size: 16px;
   }
 
   .form-component img {
     max-width: 100%;
     height: 30vh;
     object-fit: cover;
+  }
+
+  .form-content img {
+    display: none;
   }
 
   .form-content h2,
@@ -439,19 +455,36 @@
   }
 
   .form-content h2 {
-    font-size: 8vw;
+    font-size: 32px;
   }
 
   .form-content h4 {
-    font-size: 4vw;
+    font-size: 24px;
   }
 
   .input-field input,
   .form-input-big .input-field textarea {
-    font-size: 3.5vw;
+    padding-left: 8px;
+    font-size: 16px;
+  }
+
+  .input-field input,
+  .form-input-big .input-field textarea img{
+    font-size: 16px;
   }
 
   .send-button {
-    font-size: 4vw;
+    display: flex;
+    font-size: 16px;
   }
+
+  .phone-input {
+    margin-bottom: 16px;
+  }
+}
+
+@media (max-widt: 440px) {
+    .form-component{
+      width: 100%;
+    }
 }

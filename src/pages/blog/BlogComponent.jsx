@@ -75,7 +75,7 @@ const BlogComponent = () => {
         <h3>Análises e reflexões sobre as principais áreas do Direito.</h3>
       </div>
 
-      <div className="posts-container">
+      <div className="blog-posts-container">
         <div className="posts-list">
           {filteredPosts.length > 0 ? (
             filteredPosts.map((post) => (
