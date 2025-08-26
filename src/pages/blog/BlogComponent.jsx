@@ -1,43 +1,8 @@
 import React, { useState } from "react";
 import "./BlogComponent.css";
-import PostImage from "../../assets/post-image.jpg";
 import SearchIcon from "../../assets/Search.svg";
-
-const posts = [
-  {
-    id: 1,
-    image: PostImage,
-    tags: ["Trabalhista", "Humano", "Opinião"],
-    title:
-      "Entre Leis, Direitos e Pessoas: Olhares Humanos sobre a Advocacia Trabalhista",
-    smallTitle: "Olhares Humanos sobre a Advocacia Trabalhista",
-    excerpt:
-      "Uma análise sensível e crítica sobre os caminhos da advocacia trabalhista, seus dilemas cotidianos e o papel do advogado diante da dignidade do trabalhador.",
-    date: "20/02/2025",
-  },
-  {
-    id: 2,
-    image: PostImage,
-    tags: ["Empresarial", "Mercado", "Estratégia"],
-    title:
-      "Navegando no Mar Empresarial: Estratégias Jurídicas para o Sucesso no Mundo dos Negócios",
-    smallTitle: "Estratégias Jurídicas para o Sucesso no Mundo dos Negócios",
-    excerpt:
-      "Explorando as complexidades do direito empresarial e como estratégias jurídicas eficazes podem impulsionar o crescimento e a sustentabilidade das empresas.",
-    date: "21/02/2025",
-  },
-  {
-    id: 3,
-    image: PostImage,
-    tags: ["Civil", "Família", "Direitos"],
-    title:
-      "Laços e Leis: A Advocacia Civil na Proteção dos Direitos Familiares",
-    smallTitle: "A Advocacia Civil na Proteção dos Direitos Familiares",
-    excerpt:
-      "Uma reflexão sobre o papel do advogado civil na defesa dos direitos familiares, abordando questões como divórcio, guarda de filhos e patrimônio.",
-    date: "22/02/2025",
-  },
-];
+import { postsData as posts } from "../../data/posts/PostsData"
+import { useNavigate } from "react-router-dom";
 
 const availableTags = [
   "Trabalhista",
@@ -49,6 +14,11 @@ const availableTags = [
 ];
 
 const BlogComponent = () => {
+  const navigate = useNavigate();
+
+  function handleNavigation(slug) {
+    navigate("/blog/" + slug);
+  }
   const [searchTerm, setSearchTerm] = useState("");
   const [selectedTag, setSelectedTag] = useState(null);
 
@@ -79,7 +49,7 @@ const BlogComponent = () => {
         <div className="posts-list">
           {filteredPosts.length > 0 ? (
             filteredPosts.map((post) => (
-              <div className="post" key={post.id}>
+              <div className="post" key={post.id} onClick={() => handleNavigation(post?.slug)}>
                 <img src={post.image} alt={post.title} />
                 <div className="post-tags">
                   {post.tags.map((tag) => (
