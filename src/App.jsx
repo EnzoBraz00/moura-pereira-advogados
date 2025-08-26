@@ -1,6 +1,7 @@
 import React from "react";
 import HomePage from "./pages/home/HomeComponent";
 import BlogPage from "./pages/blog/BlogComponent";
+import BlogDetailPage from "./pages/blog-opened/BlogPostDetail"
 import WorkingAreaPage  from "./pages/working-areas/WorkingAreasDetailsComponent";
 import HeaderComponent from "./components/header/HeaderComponent";
 import "./App.css";
@@ -18,6 +19,7 @@ function App() {
         <Routes>
           <Route path="/" element={<HomePage/>}/>
           <Route path="/blog" element={<BlogPage/>}/>
+          <Route path="/blog/:slug" element={<BlogDetailPage/>}/>
           <Route path="/areas-de-atuacao/:slug" element={<WorkingAreaPage/>}/>
         </Routes>
       </div>

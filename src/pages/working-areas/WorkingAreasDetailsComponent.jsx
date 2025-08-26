@@ -1,6 +1,6 @@
 import React from "react";
 import { useParams } from "react-router-dom";
-import { workingAreasData } from "./WorkingAreasData";
+import { workingAreasData } from "../../data/working-areas/WorkingAreasData";
 import "./WorkingAreasDetailsComponent.css";
 
 const WorkingAreasDetailsComponent = () => {
