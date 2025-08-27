@@ -1,6 +1,8 @@
 import React from "react";
 import "./ObjectivesComponent.css";
 import missionIcon from "../../../../assets/Goal.svg";
+import visionIcon from "../../../../assets/vision-icon.svg"
+import valuesIcon from "../../../../assets/values-icon.svg"
 import valuesImage from "../../../../assets/values-image.jpg";
 import missionImage from "../../../../assets/mission-image.jpg";
 import visionImage from "../../../../assets/vision-image.png";
@@ -35,7 +37,7 @@ const ObjectivesComponent = () => {
         <div className="objective-title">
           <div className="objective-icon-container">
             <img
-              src={missionIcon}
+              src={visionIcon}
               alt="Ícone Visão"
               className="objective-icon"
             />
@@ -58,7 +60,7 @@ const ObjectivesComponent = () => {
         <div className="objective-title">
           <div className="objective-icon-container">
             <img
-              src={missionIcon}
+              src={valuesIcon}
               alt="Ícone Valores"
               className="objective-icon"
             />

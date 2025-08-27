@@ -1,6 +1,7 @@
 import React from "react";
 import "./PostsComponent.css";
 import PostPfp from "../../../../assets/post-pfp.png";
+import { useNavigate } from "react-router-dom";
 
 const posts = [
   {
@@ -27,6 +28,10 @@ const posts = [
 ];
 
 const PostsComponent = () => {
+  const navigate = useNavigate();
+  function handleNavigation(){
+      navigate("/blog")
+  }
   return (
     <div className="posts-component">
       <h5 className="posts-subtitle">POSTAGENS ORIGINAIS</h5>
@@ -45,7 +50,7 @@ const PostsComponent = () => {
           </div>
         ))}
       </div>
-      <button className="posts-button">VEJA MAIS PUBLICAÇÕES</button>
+      <button className="posts-button" onClick={() => handleNavigation()}>VEJA MAIS PUBLICAÇÕES</button>
     </div>
   );
 };
