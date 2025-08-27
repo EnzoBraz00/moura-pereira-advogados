@@ -43,7 +43,7 @@ const HeaderComponent = () => {
     <>
       <div className="header-container">
         <div className="header-top">
-          <p>(11) 97448-1602</p>
+          <a href="https://api.whatsapp.com/send?phone=5511974481602">(11) 97448-1602</a>
         </div>
         <div className="header-content">
           <img

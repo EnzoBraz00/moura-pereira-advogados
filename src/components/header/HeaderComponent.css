@@ -70,7 +70,7 @@ body {
   left: 100%;
 }
 
-.header-top p {
+.header-top a {
   color: #fff;
   font-size: 0.63vw;
   font-weight: 700;
@@ -80,9 +80,11 @@ body {
   cursor: default;
   position: relative;
   z-index: 2;
+  text-decoration: none; 
+  cursor: pointer; 
 }
 
-.header-top p:hover {
+.header-top a:hover {
   color: #c3a864;
   transform: translateX(0.21vw);
   text-shadow: 0 0.1vh 0.3vh rgba(195, 168, 100, 0.3);
@@ -210,7 +212,6 @@ body {
   left: 100%;
 }
 
-/* Hamburger Menu Styles */
 .hamburger-menu {
   display: none;
   flex-direction: column;
@@ -246,7 +247,6 @@ body {
   transform: translateY(-7px) rotate(-45deg);
 }
 
-/* Sidebar Styles */
 .sidebar {
   position: fixed;
   top: 0;
@@ -369,8 +369,6 @@ body {
 .header-link:nth-child(4) {
   animation-delay: 0.4s;
 }
-
-/* Tablet Media Query - Centralizar elementos verticalmente */
 @media (max-width: 834px) {
   .header-container {
     height: 80px;
@@ -378,20 +376,20 @@ body {
 
   .header-top {
     height: 20px;
-    justify-content: center; /* Centraliza o texto horizontalmente */
+    justify-content: center; 
   }
 
-  .header-top p {
+  .header-top a {
     font-size: 10px;
-    margin-left: 0; /* Remove margin para centralizar */
+    margin-left: 0; 
   }
 
   .header-content {
     padding: 0 32px;
     height: 60px;
-    align-items: center; /* Centraliza verticalmente */
-    justify-content: center; /* Centraliza horizontalmente */
-    gap: 40px; /* Espaço entre logo e links */
+    align-items: center;
+    justify-content: center; 
+    gap: 40px; 
   }
 
   .header-logo {
