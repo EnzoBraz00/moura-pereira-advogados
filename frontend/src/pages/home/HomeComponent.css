@@ -178,11 +178,12 @@ h3 {
   white-space: nowrap;
 }
 
-#about-link {
+#about-link{
   text-decoration: underline;
   color: #c3a864;
   cursor: pointer;
   transition: all 0.25s ease;
+  font-size: 1.25vw;
 }
 
 #about-link:hover {

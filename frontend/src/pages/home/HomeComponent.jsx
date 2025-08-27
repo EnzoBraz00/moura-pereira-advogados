@@ -11,9 +11,10 @@ import FormComponent from "./components/form/FormComponent";
 const HomeComponent = () => {
   const workingAreasRef = useRef(null);
   const aboutRef = useRef(null);
+  const formRef = useRef(null);
 
   const scrollToWorkingAreas = () => {
-    const yOffset = -100; 
+    const yOffset = -100;
     const y =
       workingAreasRef.current.getBoundingClientRect().top +
       window.pageYOffset +
@@ -30,6 +31,15 @@ const HomeComponent = () => {
     window.scrollTo({ top: y, behavior: "smooth" });
   };
 
+  const scrollToForm = () => {
+    const yOffset = -120;
+    const y =
+      formRef.current.getBoundingClientRect().top +
+      window.pageYOffset +
+      yOffset;
+    window.scrollTo({ top: y, behavior: "smooth" });
+  };
+
   return (
     <div className="home-container">
       <img
@@ -41,8 +51,8 @@ const HomeComponent = () => {
         <span>MOURA PEREIRA ADVOGADOS</span>
         <h1>A determinação é a chave para o sucesso</h1>
         <h3>
-          Lorem ipsum dolor sit amet consectetur adipiscing elit quisque
-          faucibus ex sapien vitae pellentesque sem.
+          Compromisso com a justiça e dedicação em cada detalhe, oferecendo
+          soluções jurídicas seguras e eficazes para nossos clientes.
         </h3>
       </div>
       <div className="button-container">
@@ -76,9 +86,9 @@ const HomeComponent = () => {
             a melhor solução para cada caso. Fale conosco!
           </p>
           <div className="contact-info">
-            <h3 id="about-link">(11) 97448-1602</h3>
+            <a id="about-link" href="https://api.whatsapp.com/send?phone=5511974481602">(11) 97448-1602</a>
             <h3>ou</h3>
-            <h3 id="about-link">Agende um horário</h3>
+            <a id="about-link" onClick={scrollToForm}>Agende um horário</a>
           </div>
         </div>
         <div className="about-image">
@@ -94,7 +104,7 @@ const HomeComponent = () => {
         <PostsComponent />
       </div>
 
-      <div className="form-container">
+      <div ref={formRef} className="form-container">
         <FormComponent />
       </div>
     </div>
