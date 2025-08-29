@@ -1,7 +1,6 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./BlogComponent.css";
 import SearchIcon from "../../assets/Search.svg";
-import { postsData as posts } from "../../data/posts/PostsData"
 import { useNavigate } from "react-router-dom";
 
 const availableTags = [
@@ -21,6 +20,26 @@ const BlogComponent = () => {
   }
   const [searchTerm, setSearchTerm] = useState("");
   const [selectedTag, setSelectedTag] = useState(null);
+  const [posts, setPosts] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
+
+  useEffect(() => {
+    async function fetchPosts() {
+      try {
+        setLoading(true);
+        const res = await fetch("http://localhost:3000/api/posts");
+        if (!res.ok) throw new Error("Falha ao carregar posts");
+        const data = await res.json();
+        setPosts(data);
+      } catch (err) {
+        setError(err.message);
+      } finally {
+        setLoading(false);
+      }
+    }
+    fetchPosts();
+  }, []);
 
   const filteredPosts = posts.filter((post) => {
     const matchesSearch =
@@ -47,7 +66,11 @@ const BlogComponent = () => {
 
       <div className="blog-posts-container">
         <div className="posts-list">
-          {filteredPosts.length > 0 ? (
+          {loading ? (
+            <p>Carregando...</p>
+          ) : error ? (
+            <p>Erro: {error}</p>
+          ) : filteredPosts.length > 0 ? (
             filteredPosts.map((post) => (
               <div className="post" key={post.id} onClick={() => handleNavigation(post?.slug)}>
                 <img src={post.image} alt={post.title} />

@@ -1,8 +1,14 @@
 import React from "react";
 import "./FooterComponent.css";
 import AdressIcon from "../../assets/Location.svg";
+import { useNavigate } from "react-router-dom";
 
 const FooterComponent = () => {
+  const navigate = useNavigate();
+  function handleNavigation(){
+    navigate("/login")
+  }
+  
   return (
     <div className="footer-container">
       <div className="footer-wrapper">
@@ -24,6 +30,7 @@ const FooterComponent = () => {
         <button
           className="restricted-area-btn"
           aria-label="Acessar área restrita"
+          onClick={() => {handleNavigation()}}
         >
           Área Restrita
         </button>

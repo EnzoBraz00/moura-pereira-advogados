@@ -3,6 +3,7 @@ import HomePage from "./pages/home/HomeComponent";
 import BlogPage from "./pages/blog/BlogComponent";
 import BlogDetailPage from "./pages/blog-opened/BlogPostDetail"
 import WorkingAreaPage  from "./pages/working-areas/WorkingAreasDetailsComponent";
+import LoginPage from "./pages/login/LoginComponent"
 import HeaderComponent from "./components/header/HeaderComponent";
 import "./App.css";
 import FooterComponent from "./components/footer/FooterComponent";
@@ -21,6 +22,8 @@ function App() {
           <Route path="/blog" element={<BlogPage/>}/>
           <Route path="/blog/:slug" element={<BlogDetailPage/>}/>
           <Route path="/areas-de-atuacao/:slug" element={<WorkingAreaPage/>}/>
+
+          <Route path="/login" element={<LoginPage />}/>
         </Routes>
       </div>
       <FooterComponent />
