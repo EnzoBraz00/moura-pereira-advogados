@@ -3,6 +3,8 @@ import cors from "cors";
 import dotenv from "dotenv";
 import { PrismaClient } from "@prisma/client";
 import path from "path";
+import authRoutes from "./routes/auth.js";
+import restrictedRoutes from "./routes/restricted.js";
 
 dotenv.config();
 
@@ -16,24 +18,31 @@ app.use(
 );
 app.use(express.json());
 
-app.use("/assets", express.static(path.join(process.cwd(), "src/assets")));
+app.use("/auth", authRoutes);
+app.use("/restricted", restrictedRoutes);
 
-app.post("/api/login", async (req, res) => {
-  const { email, password } = req.body;
-
-  const user = await prisma.user.findUnique({ where: { email } });
-  if (!user) {
-    return res.status(401).json({ error: "Credenciais inválidas" });
-  }
-
-  // TODO: adicionar bcrypt.compare
-  res.json({ message: "Login OK", user: { email: user.email } });
-});
+function toFullImageUrl(image) {
+  if (typeof image !== "string") return image;
+  if (image.startsWith("http://") || image.startsWith("https://")) return image;
+  if (image.startsWith("/src/assets")) return `http://localhost:5173${image}`;
+  if (image.startsWith("/assets")) return `http://localhost:3000${image}`;
+  return image;
+}
 
 // rota para listar posts
 app.get("/api/posts", async (req, res) => {
   const posts = await prisma.post.findMany();
-  res.json(posts);
+  const normalized = posts.map((p) => ({ ...p, image: toFullImageUrl(p.image) }));
+  res.json(normalized);
+});
+
+// rota para buscar post por slug
+app.get("/api/posts/:slug", async (req, res) => {
+  const { slug } = req.params;
+  const post = await prisma.post.findUnique({ where: { slug } });
+  if (!post) return res.status(404).json({ error: "Post não encontrado" });
+  const normalized = { ...post, image: toFullImageUrl(post.image) };
+  res.json(normalized);
 });
 
 // rota para criar post (restrita futuramente)
