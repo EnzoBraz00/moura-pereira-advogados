@@ -21,19 +21,6 @@ app.use(express.json());
 app.use("/auth", authRoutes);
 app.use("/restricted", restrictedRoutes);
 
-// rota de login
-app.post("/api/login", async (req, res) => {
-  const { email, password } = req.body;
-
-  const user = await prisma.user.findUnique({ where: { email } });
-  if (!user) {
-    return res.status(401).json({ error: "Credenciais inválidas" });
-  }
-
-  // TODO: adicionar bcrypt.compare
-  res.json({ message: "Login OK", user: { email: user.email } });
-});
-
 function toFullImageUrl(image) {
   if (typeof image !== "string") return image;
   if (image.startsWith("http://") || image.startsWith("https://")) return image;

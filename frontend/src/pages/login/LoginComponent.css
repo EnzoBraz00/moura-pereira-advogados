@@ -69,12 +69,25 @@
   margin: 0;
 }
 
+.error-message {
+  background-color: #fee;
+  color: #c33;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #fcc;
+  text-align: center;
+  width: 100%;
+  max-width: 350px;
+  font-size: 14px;
+}
+
 .login-fields {
   display: flex;
   flex-direction: column;
   gap: 20px;
   width: 100%;
   max-width: 350px;
+  margin-top: 32px;
 }
 
 .form-login {
@@ -109,6 +122,7 @@
   gap: 16px;
   width: 100%;
   max-width: 350px;
+  margin-top: 32px;
 }
 
 .btn-submit {
