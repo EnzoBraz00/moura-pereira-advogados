@@ -1,0 +1,203 @@
+@import url("https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+* {
+  font-family: "PT Serif", serif;
+  margin: 0;
+  padding: 0;
+}
+
+.admin-component {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.posts-admin-container {
+  background: white;
+  border-radius: 8px;
+  padding: 2rem;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.admin-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.admin-header h2 {
+  margin: 0;
+  color: #333;
+  font-size: 1.8rem;
+}
+
+.admin-tabs {
+  display: flex;
+  gap: 0.5rem;
+  background: #f5f5f5;
+  padding: 0.25rem;
+  border-radius: 8px;
+}
+
+.tab-button {
+  padding: 0.75rem 1.5rem;
+  border: none;
+  background: transparent;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+  color: #666;
+  transition: all 0.2s ease;
+}
+
+.tab-button:hover {
+  background: #e0e0e0;
+  color: #333;
+}
+
+.tab-button.active {
+  background: #1a1247;
+  color: white;
+}
+
+.search-input-group {
+    background-color: white;
+    width: 250px;
+    margin-top: 0;
+    margin-bottom: 40px;
+}
+
+.search-input-group input {
+    font-size: 16px;
+}
+
+.posts-table, .contatos-table{
+    width: 100%;
+    max-height: 700px;
+    border: 1px solid rgb(223, 223, 223);
+    box-shadow: 0 0.2vh 2.4vh 0 rgba(30, 27, 44, 0.06);
+    border-radius: 8px;
+    overflow-y: auto;
+}
+
+.posts-table::-webkit-scrollbar,
+.contatos-table::-webkit-scrollbar {
+  width: 8px;
+}
+
+.posts-table::-webkit-scrollbar-thumb,
+.contatos-table::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 4px;
+}
+
+.posts-table::-webkit-scrollbar-thumb:hover,
+.contatos-table::-webkit-scrollbar-thumb:hover {
+  background: #999;
+}
+
+.search-input-group button:hover {
+  background: #0056b3;
+}
+
+.search-input-group img {
+  width: 20px;
+  height: 20px;
+}
+
+.posts-table,
+.contatos-table {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.post-admin,
+.contato-admin {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 1.5rem;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  background: #fafafa;
+  transition: all 0.2s ease;
+}
+
+.post-admin:hover,
+.contato-admin:hover {
+  background: #f0f0f0;
+  border-color: #ccc;
+}
+
+.posts-admin-texts,
+.contato-admin-texts {
+  flex: 1;
+}
+
+.posts-admin-texts h4,
+.contato-admin-texts h4 {
+  margin: 0 0 0.5rem 0;
+  color: #333;
+  font-size: 1.1rem;
+}
+
+.posts-admin-texts p,
+.contato-admin-texts p {
+  margin: 0.25rem 0;
+  color: #666;
+  line-height: 1.5;
+}
+
+.contato-admin-texts p strong {
+  color: #333;
+  font-weight: 600;
+}
+
+.post-admin img,
+.contato-admin img {
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+  opacity: 0.7;
+  transition: opacity 0.2s ease;
+  margin-left: 1rem;
+}
+
+.post-admin img:hover,
+.contato-admin img:hover {
+  opacity: 1;
+}
+
+@media (max-width: 768px) {
+  .admin-component {
+    padding: 1rem;
+  }
+  
+  .posts-admin-container {
+    padding: 1rem;
+  }
+  
+  .admin-header {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .admin-tabs {
+    justify-content: center;
+  }
+  
+  .post-admin,
+  .contato-admin {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .post-admin img,
+  .contato-admin img {
+    align-self: flex-end;
+    margin-left: 0;
+  }
+}

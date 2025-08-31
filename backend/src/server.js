@@ -69,6 +69,40 @@ app.post("/api/posts", async (req, res) => {
   }
 });
 
+// rota para listar formulários de contato
+app.get("/api/contatos", async (req, res) => {
+  try {
+    const contatos = await prisma.contato.findMany({
+      orderBy: {
+        createdAt: 'desc'
+      }
+    });
+    res.json(contatos);
+  } catch (err) {
+    res.status(500).json({ error: "Erro ao buscar formulários de contato" });
+  }
+});
+
+// rota para criar novo formulário de contato
+app.post("/api/contatos", async (req, res) => {
+  const { nome, email, telefone, tipoNegocio, mensagem } = req.body;
+
+  try {
+    const newContato = await prisma.contato.create({
+      data: {
+        nome,
+        email,
+        telefone,
+        tipoNegocio,
+        mensagem,
+      },
+    });
+    res.json(newContato);
+  } catch (err) {
+    res.status(400).json({ error: err.message });
+  }
+});
+
 app.listen(3000, () => {
   console.log("🚀 Server running on http://localhost:3000");
 });
