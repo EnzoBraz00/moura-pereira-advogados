@@ -32,7 +32,10 @@ function toFullImageUrl(image) {
 // rota para listar posts
 app.get("/api/posts", async (req, res) => {
   const posts = await prisma.post.findMany();
-  const normalized = posts.map((p) => ({ ...p, image: toFullImageUrl(p.image) }));
+  const normalized = posts.map((p) => ({
+    ...p,
+    image: toFullImageUrl(p.image),
+  }));
   res.json(normalized);
 });
 
@@ -74,8 +77,8 @@ app.get("/api/contatos", async (req, res) => {
   try {
     const contatos = await prisma.contato.findMany({
       orderBy: {
-        createdAt: 'desc'
-      }
+        createdAt: "desc",
+      },
     });
     res.json(contatos);
   } catch (err) {
@@ -100,6 +103,42 @@ app.post("/api/contatos", async (req, res) => {
     res.json(newContato);
   } catch (err) {
     res.status(400).json({ error: err.message });
+  }
+});
+
+app.put("/api/posts/:slug", async (req, res) => {
+  const { slug } = req.params;
+  const { image, tags, title, smallTitle, excerpt, date, content } = req.body;
+
+  try {
+    const updatedPost = await prisma.post.update({
+      where: { slug },
+      data: {
+        image,
+        tags,
+        title,
+        smallTitle,
+        excerpt,
+        date,
+        content,
+      },
+    });
+    res.json(updatedPost);
+  } catch (err) {
+    res.status(400).json({ error: "Erro ao atualizar post: " + err.message });
+  }
+});
+
+app.delete("/api/posts/:slug", async (req, res) => {
+  const { slug } = req.params;
+
+  try {
+    await prisma.post.delete({
+      where: { slug },
+    });
+    res.json({ message: "Post deletado com sucesso" });
+  } catch (err) {
+    res.status(400).json({ error: "Erro ao deletar post: " + err.message });
   }
 });
 
