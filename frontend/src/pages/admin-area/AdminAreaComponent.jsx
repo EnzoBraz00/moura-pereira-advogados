@@ -112,7 +112,7 @@ const AdminAreaComponent = () => {
         </div>
 
         <div className="admin-wrapper">
-          <div className="search-input-group">
+          <div className="search-input-admin-group">
             <input
               type="text"
               placeholder={

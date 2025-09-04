@@ -263,6 +263,19 @@ body {
   outline-offset: 0.21vw;
 }
 
+.services-container .services-section{
+  ul{
+    transition: all 0.3s ease;
+  }
+}
+.services-container .services-section:hover{
+  ul{
+    padding-left: 8px;
+    transition: all 0.3s ease;
+  }
+}
+
+
 @keyframes fadeInUp {
   to {
     opacity: 1;

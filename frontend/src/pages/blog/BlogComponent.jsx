@@ -143,7 +143,7 @@ const BlogComponent = () => {
             </div>
             <div className="recent-posts-list">
               {posts.slice(0, 3).map((post) => (
-                <div className="recent-post" key={post.id}>
+                <div className="recent-post" key={post.id} onClick={() => handleNavigation(post?.slug)}>
                   <img src={post.image} alt={post.title} />
                   <div className="recent-post-info">
                     <h2>{post.smallTitle}</h2>

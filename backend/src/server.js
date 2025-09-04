@@ -86,7 +86,6 @@ app.get("/api/contatos", async (req, res) => {
   }
 });
 
-// rota para criar novo formulário de contato
 app.post("/api/contatos", async (req, res) => {
   const { nome, email, telefone, tipoNegocio, mensagem } = req.body;
 

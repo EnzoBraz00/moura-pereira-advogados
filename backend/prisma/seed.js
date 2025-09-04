@@ -4,7 +4,6 @@ import bcrypt from "bcryptjs";
 const prisma = new PrismaClient();
 
 async function main() {
-  // ==== ADMIN ====
   const email = process.env.ADMIN_EMAIL;
   const rawPass = process.env.ADMIN_PASSWORD;
   const password = await bcrypt.hash(rawPass, 10);
@@ -22,6 +21,7 @@ async function main() {
     {
       image: "/src/assets/post-image.jpg",
       tags: ["Trabalhista", "Humano", "Opinião"],
+      author: "João Carlos Moura",
       title:
         "Entre Leis, Direitos e Pessoas: Olhares Humanos sobre a Advocacia Trabalhista",
       smallTitle: "Olhares Humanos sobre a Advocacia Trabalhista",
@@ -41,6 +41,7 @@ async function main() {
     {
       image: "/src/assets/post-image.jpg",
       tags: ["Empresarial", "Mercado", "Estratégia"],
+      author: "João Carlos Moura",
       title:
         "Navegando no Mar Empresarial: Estratégias Jurídicas para o Sucesso no Mundo dos Negócios",
       smallTitle: "Estratégias Jurídicas para o Sucesso no Mundo dos Negócios",
@@ -59,6 +60,7 @@ async function main() {
     {
       image: "/src/assets/post-image.jpg",
       tags: ["Civil", "Família", "Direitos"],
+      author: "João Carlos Moura",
       title:
         "Laços e Leis: A Advocacia Civil na Proteção dos Direitos Familiares",
       smallTitle: "A Advocacia Civil na Proteção dos Direitos Familiares",
@@ -77,6 +79,7 @@ async function main() {
     {
       image: "/src/assets/post-image.jpg",
       tags: ["Consumidor", "Proteção", "Direitos"],
+      author: "João Carlos Moura",
       title:
         "Empoderamento do Consumidor: Como a Lei Protege Seus Direitos no Mercado",
       smallTitle: "Como a Lei Protege Seus Direitos no Mercado",
@@ -95,6 +98,7 @@ async function main() {
     {
       image: "/src/assets/post-image.jpg",
       tags: ["Sucessões", "Patrimônio", "Planejamento"],
+      author: "João Carlos Moura",
       title:
         "Planejamento Sucessório: Protegendo o Futuro da Sua Família",
       smallTitle: "Protegendo o Futuro da Sua Família",
@@ -113,6 +117,7 @@ async function main() {
     {
       image: "/src/assets/post-image.jpg",
       tags: ["Trabalhista", "Reforma", "Mercado"],
+      author: "João Carlos Moura",
       title:
         "Reforma Trabalhista: Impactos e Oportunidades no Mercado de Trabalho",
       smallTitle: "Impactos e Oportunidades no Mercado de Trabalho",
@@ -131,6 +136,7 @@ async function main() {
     {
       image: "/src/assets/post-image.jpg",
       tags: ["Empresarial", "Startup", "Inovação"],
+      author: "João Carlos Moura",
       title:
         "Startups e Direito: Desafios Jurídicos no Mundo da Inovação",
       smallTitle: "Desafios Jurídicos no Mundo da Inovação",
