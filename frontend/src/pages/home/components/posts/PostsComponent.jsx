@@ -13,10 +13,6 @@ const PostsComponent = () => {
     navigate("/blog");
   }
 
-  function handlePostNavigation(slug) {
-    navigate("/blog/" + slug);
-  }
-
   useEffect(() => {
     async function fetchPosts() {
       try {

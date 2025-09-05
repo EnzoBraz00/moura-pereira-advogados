@@ -169,7 +169,6 @@
   .posts-component {
     display: flex;
     justify-content: center;
-    margin-left: 34px;
     width: 100%;
   }
 
