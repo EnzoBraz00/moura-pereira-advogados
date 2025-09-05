@@ -1,11 +1,30 @@
 import React from "react";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import { workingAreasData } from "../../data/working-areas/WorkingAreasData";
 import "./WorkingAreasDetailsComponent.css";
 
 const WorkingAreasDetailsComponent = () => {
   const { slug } = useParams();
+  const navigate = useNavigate();
   const area = workingAreasData[slug];
+
+  function handleFormNavigation() {
+    navigate("/");
+    setTimeout(() => {
+      const formSection = document.querySelector(
+        ".form-container"
+      );
+      if (formSection) {
+        const yOffset = -100;
+        const y =
+          formSection.getBoundingClientRect().top +
+          window.pageYOffset +
+          yOffset;
+        window.scrollTo({ top: y, behavior: "smooth" });
+      }
+    }, 100);
+  }
+
   return (
     <div className="working-areas-details-component">
       <div
@@ -53,7 +72,7 @@ const WorkingAreasDetailsComponent = () => {
           ))}
         </div>
         <div className="cta-container">
-          <p>{area?.cta}</p>
+          <p onClick={() => handleFormNavigation()}>{area?.cta}</p>
         </div>
       </div>
     </div>
