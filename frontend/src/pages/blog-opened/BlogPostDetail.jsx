@@ -13,7 +13,7 @@ const BlogPostDetail = () => {
     async function fetchPost() {
       try {
         setLoading(true);
-        const res = await fetch(`http://localhost:3000/api/posts/${slug}`);
+        const res = await fetch(`${import.meta.env.VITE_API_URL}/api/posts/${slug}`);
         if (!res.ok) throw new Error("Falha ao carregar post");
         const data = await res.json();
         setPost(data);

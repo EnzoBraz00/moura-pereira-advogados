@@ -25,11 +25,11 @@ const AdminAreaComponent = () => {
     try {
       setLoading(true);
 
-      const postsRes = await fetch("http://localhost:3000/api/posts");
+      const postsRes = await fetch(`${import.meta.env.VITE_API_URL}/api/posts`);
       if (!postsRes.ok) throw new Error("Não foi possível carregar os posts");
       setPosts(await postsRes.json());
 
-      const contatosRes = await fetch("http://localhost:3000/api/contatos");
+      const contatosRes = await fetch(`${import.meta.env.VITE_API_URL}/api/contatos`);
       if (!contatosRes.ok)
         throw new Error("Não foi possível carregar os contatos");
       setContatos(await contatosRes.json());
@@ -58,8 +58,8 @@ const AdminAreaComponent = () => {
     try {
       const method = editingPost ? "PUT" : "POST";
       const url = editingPost
-        ? `http://localhost:3000/api/posts/${editingPost.slug}` // <-- usa slug
-        : "http://localhost:3000/api/posts";
+        ? `${import.meta.env.VITE_API_URL}/api/posts/${editingPost.slug}` // <-- usa slug
+        : `${import.meta.env.VITE_API_URL}/api/posts`;
 
       const res = await fetch(url, {
         method,
@@ -81,7 +81,7 @@ const AdminAreaComponent = () => {
     if (!window.confirm("Tem certeza que deseja excluir este post?")) return;
 
     try {
-      const res = await fetch(`http://localhost:3000/api/posts/${slug}`, {
+      const res = await fetch(`${import.meta.env.VITE_API_URL}/api/posts/${slug}`, {
         method: "DELETE",
       });
 

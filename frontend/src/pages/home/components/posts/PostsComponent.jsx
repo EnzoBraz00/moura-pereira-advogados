@@ -17,7 +17,7 @@ const PostsComponent = () => {
     async function fetchPosts() {
       try {
         setLoading(true);
-        const res = await fetch("http://localhost:3000/api/posts");
+        const res = await fetch(`${import.meta.env.VITE_API_URL}/api/posts`);
         if (!res.ok) throw new Error("Falha ao carregar posts");
         const data = await res.json();
         setPosts(data);
