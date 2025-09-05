@@ -51,7 +51,7 @@ const HomeComponent = () => {
       if (response.ok) {
         alert('Mensagem enviada com sucesso!');
       }
-    } catch (error) {
+    } catch {
       alert('Erro ao enviar mensagem');
     }
   };

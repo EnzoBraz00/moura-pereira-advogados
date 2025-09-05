@@ -44,6 +44,11 @@ const AdminAreaComponent = () => {
     setEditingPost(post);
     setIsModalOpen(true);
   };
+  
+  const filteredPosts = posts.filter((p) =>
+    p.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+    p.excerpt.toLowerCase().includes(searchTerm.toLowerCase())
+  );
 
   const filteredContatos = contatos.filter((c) =>
     c.nome.toLowerCase().includes(searchTerm.toLowerCase())
@@ -145,8 +150,8 @@ const AdminAreaComponent = () => {
               <p>Carregando posts...</p>
             ) : error ? (
               <p>Erro: {error}</p>
-            ) : posts.length > 0 ? (
-              posts.map((post) => (
+            ) : filteredPosts.length > 0 ? (
+              filteredPosts.map((post) => (
                 <div className="post-admin" key={post.id}>
                   <div className="posts-admin-texts">
                     <h4>{post.title}</h4>
