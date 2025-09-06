@@ -33,10 +33,10 @@ O site está hospedado em produção no Vercel:
 ---
 
 ## 📂 Estrutura do Projeto
-´´´
+
+```bash
 moura-pereira-advogados/
 ├─ backend/
-│  ├─ node_modules/
 │  ├─ prisma/
 │  ├─ src/
 │  │  ├─ assets/
@@ -48,7 +48,6 @@ moura-pereira-advogados/
 │  ├─ package-lock.json
 │  └─ package.json
 ├─ frontend/
-│  ├─ node_modules/
 │  ├─ public/
 │  ├─ src/
 │  ├─ .env
@@ -59,8 +58,12 @@ moura-pereira-advogados/
 │  ├─ package.json
 │  ├─ README.md
 │  └─ vite.config.js
-└─ node_modules/
-
+```
+---
+## 👨‍💻 Autores
+- [Enzo Braz](https://github.com/EnzoBraz00) – Desenvolvimento Frontend e Backend
+- João Carlos Moura – Coordenação e revisão de conteúdo jurídico
+  
 ---
 
 ## 📄 Licença
