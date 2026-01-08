@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
 
 * {
   font-family: "PT Serif", serif;
@@ -47,6 +47,7 @@
   padding: 1.25vw 0.833vw 1.042vw 0.833vw;
   width: 17.708vw;
   max-width: 95vw;
+  height: 250px;
   display: flex;
   flex-direction: column;
   gap: 0.625vw;
@@ -71,13 +72,6 @@
   align-items: center;
   gap: 0.833vw;
   margin-bottom: 0.833vh;
-}
-
-.post-specs img {
-  width: 2.5vw;
-  height: 2.5vw;
-  border-radius: 50%;
-  object-fit: cover;
 }
 
 .post-author {
@@ -112,6 +106,10 @@
   color: #222;
   margin: 0;
   line-height: 1.5;
+  display: -webkit-box;
+  -webkit-line-clamp: 5;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 
 .posts-button {
@@ -171,7 +169,6 @@
   .posts-component {
     display: flex;
     justify-content: center;
-    margin-left: 34px;
     width: 100%;
   }
 

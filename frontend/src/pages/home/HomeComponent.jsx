@@ -40,6 +40,22 @@ const HomeComponent = () => {
     window.scrollTo({ top: y, behavior: "smooth" });
   };
 
+  const handleFormSubmit = async (formData) => {
+    try {
+      const response = await fetch('`${import.meta.env.VITE_API_URL}/api/contatos', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(formData)
+      });
+      
+      if (response.ok) {
+        alert('Mensagem enviada com sucesso!');
+      }
+    } catch {
+      alert('Erro ao enviar mensagem');
+    }
+  };
+
   return (
     <div className="home-container">
       <img
@@ -105,7 +121,7 @@ const HomeComponent = () => {
       </div>
 
       <div ref={formRef} className="form-container">
-        <FormComponent />
+        <FormComponent onSubmit={handleFormSubmit} />
       </div>
     </div>
   );

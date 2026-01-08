@@ -25,11 +25,11 @@ const AdminAreaComponent = () => {
     try {
       setLoading(true);
 
-      const postsRes = await fetch("http://localhost:3000/api/posts");
+      const postsRes = await fetch(`${import.meta.env.VITE_API_URL}/api/posts`);
       if (!postsRes.ok) throw new Error("Não foi possível carregar os posts");
       setPosts(await postsRes.json());
 
-      const contatosRes = await fetch("http://localhost:3000/api/contatos");
+      const contatosRes = await fetch(`${import.meta.env.VITE_API_URL}/api/contatos`);
       if (!contatosRes.ok)
         throw new Error("Não foi possível carregar os contatos");
       setContatos(await contatosRes.json());
@@ -44,6 +44,11 @@ const AdminAreaComponent = () => {
     setEditingPost(post);
     setIsModalOpen(true);
   };
+  
+  const filteredPosts = posts.filter((p) =>
+    p.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+    p.excerpt.toLowerCase().includes(searchTerm.toLowerCase())
+  );
 
   const filteredContatos = contatos.filter((c) =>
     c.nome.toLowerCase().includes(searchTerm.toLowerCase())
@@ -53,8 +58,8 @@ const AdminAreaComponent = () => {
     try {
       const method = editingPost ? "PUT" : "POST";
       const url = editingPost
-        ? `http://localhost:3000/api/posts/${editingPost.slug}` // <-- usa slug
-        : "http://localhost:3000/api/posts";
+        ? `${import.meta.env.VITE_API_URL}/api/posts/${editingPost.slug}` // <-- usa slug
+        : `${import.meta.env.VITE_API_URL}/api/posts`;
 
       const res = await fetch(url, {
         method,
@@ -76,7 +81,7 @@ const AdminAreaComponent = () => {
     if (!window.confirm("Tem certeza que deseja excluir este post?")) return;
 
     try {
-      const res = await fetch(`http://localhost:3000/api/posts/${slug}`, {
+      const res = await fetch(`${import.meta.env.VITE_API_URL}/api/posts/${slug}`, {
         method: "DELETE",
       });
 
@@ -112,7 +117,7 @@ const AdminAreaComponent = () => {
         </div>
 
         <div className="admin-wrapper">
-          <div className="search-input-group">
+          <div className="search-input-admin-group">
             <input
               type="text"
               placeholder={
@@ -145,8 +150,8 @@ const AdminAreaComponent = () => {
               <p>Carregando posts...</p>
             ) : error ? (
               <p>Erro: {error}</p>
-            ) : posts.length > 0 ? (
-              posts.map((post) => (
+            ) : filteredPosts.length > 0 ? (
+              filteredPosts.map((post) => (
                 <div className="post-admin" key={post.id}>
                   <div className="posts-admin-texts">
                     <h4>{post.title}</h4>

@@ -28,7 +28,7 @@ const BlogComponent = () => {
     async function fetchPosts() {
       try {
         setLoading(true);
-        const res = await fetch("http://localhost:3000/api/posts");
+        const res = await fetch(`${import.meta.env.VITE_API_URL}/api/posts`);
         if (!res.ok) throw new Error("Falha ao carregar posts");
         const data = await res.json();
         setPosts(data);
@@ -143,7 +143,7 @@ const BlogComponent = () => {
             </div>
             <div className="recent-posts-list">
               {posts.slice(0, 3).map((post) => (
-                <div className="recent-post" key={post.id}>
+                <div className="recent-post" key={post.id} onClick={() => handleNavigation(post?.slug)}>
                   <img src={post.image} alt={post.title} />
                   <div className="recent-post-info">
                     <h2>{post.smallTitle}</h2>

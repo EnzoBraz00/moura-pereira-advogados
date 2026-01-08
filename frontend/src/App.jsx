@@ -6,7 +6,8 @@ import WorkingAreaPage from "./pages/working-areas/WorkingAreasDetailsComponent"
 import LoginPage from "./pages/login/LoginComponent";
 import AdminPage from "./pages/admin-area/AdminAreaComponent";
 import HeaderComponent from "./components/header/HeaderComponent";
-import ProtectedRoute from "./components/auth/ProtectedRoute"
+import ProtectedRoute from "./components/auth/ProtectedRoute";
+import WhatsAppButton from "./components/whatsapp-button/WhatsappButtonComponent";
 import "./App.css";
 import FooterComponent from "./components/footer/FooterComponent";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
@@ -38,10 +39,13 @@ function App() {
                 </ProtectedRoute>
               }
             ></Route>
-
           </Routes>
         </div>
         <FooterComponent />
+        <WhatsAppButton
+          phoneNumber="5511974481602" // Seu número do WhatsApp
+          message="Olá! Gostaria de mais informações sobre seus serviços."
+        />
       </div>
     </BrowserRouter>
   );

@@ -27,7 +27,6 @@ body {
   height: 37.3vh;
   background-color: #1a1247;
   color: #fff;
-  cursor: pointer;
   position: relative;
   overflow: hidden;
   box-shadow: 0 0.4vh 0.8vh rgba(0, 0, 0, 0.2);
