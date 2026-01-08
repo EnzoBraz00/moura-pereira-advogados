@@ -14,6 +14,7 @@ app.use(
   cors({
     origin: [
       "http://localhost:5173",
+      "http://localhost:3000",
       "https://moura-pereira-advogados.vercel.app" // substitui pelo endereço real do front na Vercel
     ],
   })
