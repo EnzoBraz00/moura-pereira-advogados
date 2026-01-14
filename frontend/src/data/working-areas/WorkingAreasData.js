@@ -432,4 +432,72 @@ export const workingAreasData = {
     ],
     cta: "Agende uma consulta para soluções legais rápidas e seguras",
   },
+  "direito-imobiliario": {
+    id: 7,
+    slug: "direito-imobiliario",
+    img: civilImg,
+    title: "Direito Imobiliário",
+    subtitle: "Proteção e defesa de direitos sobre bens imóveis",
+    description:
+      "Atuamos na defesa de direitos sobre propriedades, contratos imobiliários, compra e venda de imóveis, locação e transferência de propriedades.",
+    fullDescription:
+      "O Direito Imobiliário regula as relações jurídicas envolvendo bens imóveis, abrangendo contratos de compra e venda, locação, transferência de propriedade, hipotecas e questões relacionadas ao registro de imóveis. Nosso escritório presta assessoria completa em transações imobiliárias, garantindo segurança jurídica e conformidade com a legislação vigente.",
+    services: {
+      consumer: [
+        "Assessoria em compra e venda de imóveis",
+        "Contratos de locação e inquilinato",
+        "Regularização de propriedades",
+        "Defesa em ações possessórias",
+        "Orientação sobre hipotecas e financiamentos",
+        "Assessoria em transações imobiliárias",
+        "Mediação em conflitos imobiliários",
+      ],
+      provider: [
+        "Elaboração e revisão de contratos imobiliários",
+        "Representação em transações e negociações",
+        "Assessoria em registros e documentação de imóveis",
+        "Defesa em processos relacionados a propriedade",
+        "Consultoria preventiva para minimizar riscos legais",
+      ],
+    },
+    benefits: [
+      "Segurança jurídica em transações imobiliárias",
+      "Proteção de direitos sobre propriedades",
+      "Assessoria completa em contratos imobiliários",
+      "Regularização e conformidade legal de imóveis",
+    ],
+    topics: [
+      {
+        title: "Compra e venda de imóveis",
+        content:
+          "- Assessoria completa em transações imobiliárias, desde a negociação até o registro, garantindo segurança jurídica.",
+      },
+      {
+        title: "Contratos de locação",
+        content:
+          "- Elaboração, revisão e análise de contratos de aluguel, protegendo direitos de locadores e locatários.",
+      },
+      {
+        title: "Regularização de propriedades",
+        content:
+          "- Assistência em regularização de imóveis, documentação e registro, evitando problemas futuros.",
+      },
+      {
+        title: "Direitos possessórios",
+        content:
+          "- Defesa em ações possessórias, garantindo manutenção ou recuperação da posse de imóveis.",
+      },
+      {
+        title: "Hipotecas e financiamentos",
+        content:
+          "- Orientação sobre hipotecas, empréstimos com garantia imobiliária e direitos relacionados.",
+      },
+      {
+        title: "Mediação de conflitos imobiliários",
+        content:
+          "- Atuação na conciliação de conflitos entre partes, buscando acordo amigável e evitando processos judiciais.",
+      },
+    ],
+    cta: "Agende uma consulta para segurança em suas transações imobiliárias",
+  },
 };

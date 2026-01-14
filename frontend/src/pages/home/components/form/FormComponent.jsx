@@ -101,13 +101,16 @@ export default function ContactForm({ onSubmit, initialData }) {
                 className="input-icon"
               />
               <div className="input-field">
-                <input
-                  type="text"
+                <select
                   name="tipoNegocio"
                   placeholder="Tipo de Negócio"
                   value={formData.tipoNegocio}
                   onChange={handleChange}
-                />
+                >
+                  <option value="">Selecione o tipo de negócio</option>
+                  <option value="Pessoa Física">Pessoa Física</option>
+                  <option value="Pessoa Jurídica">Pessoa Jurídica</option>
+                </select>
               </div>
             </div>
           </div>

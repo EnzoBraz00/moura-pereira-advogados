@@ -3,7 +3,6 @@ import homeImage from "../../assets/home-image.png";
 import aboutImage from "../../assets/about-image.jpg";
 import arrowLeft from "../../assets/arrow-left.svg";
 import "./HomeComponent.css";
-import ObjectivesComponent from "./components/objectives/ObjectivesComponent";
 import WorkingAreasComponent from "./components/working-areas/WorkingAreasComponent";
 import PostsComponent from "./components/posts/PostsComponent";
 import FormComponent from "./components/form/FormComponent";
@@ -58,31 +57,29 @@ const HomeComponent = () => {
 
   return (
     <div className="home-container">
-      <img
-        src={homeImage}
-        alt="Estatua de ouro segurando uma coroa"
-        className="home-img"
-      />
-      <div className="texts-container">
-        <span>MOURA PEREIRA ADVOGADOS</span>
-        <h1>A determinação é a chave para o sucesso</h1>
-        <h3>
-          Compromisso com a justiça e dedicação em cada detalhe, oferecendo
-          soluções jurídicas seguras e eficazes para nossos clientes.
-        </h3>
-      </div>
-      <div className="button-container">
-        <button className="working-areas-button" onClick={scrollToWorkingAreas}>
-          <img src={arrowLeft} alt="Seta para a esquerda" />
-          ÁREAS DE ATUAÇÃO
-        </button>
-        <button className="more-info-button" onClick={scrollToAbout}>
-          SAIBA MAIS
-        </button>
-      </div>
-
-      <div ref={aboutRef} className="objectives-container">
-        <ObjectivesComponent />
+      <div className="hero-section">
+        <img
+          src={homeImage}
+          alt="Estatua de ouro segurando uma coroa"
+          className="home-img"
+        />
+        <div className="texts-container">
+          <span>MOURA PEREIRA ADVOGADOS</span>
+          <h1>A determinação é a chave para o sucesso</h1>
+          <h3>
+            Compromisso com a justiça e dedicação em cada detalhe, oferecendo
+            soluções jurídicas seguras e eficazes para nossos clientes.
+          </h3>
+        </div>
+        <div className="button-container">
+          <button className="working-areas-button" onClick={scrollToWorkingAreas}>
+            <img src={arrowLeft} alt="Seta para a esquerda" />
+            ÁREAS DE ATUAÇÃO
+          </button>
+          <button className="more-info-button" onClick={scrollToForm}>
+            AGENDE UMA CONSULTORIA
+          </button>
+        </div>
       </div>
 
       <div ref={aboutRef} className="about-container">
