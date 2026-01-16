@@ -1,4 +1,5 @@
 import React, { useRef } from "react";
+import { Helmet } from "react-helmet";
 import homeImage from "../../assets/home-image.png";
 import aboutImage from "../../assets/about-image.png";
 import arrowLeft from "../../assets/arrow-left.svg";
@@ -48,7 +49,13 @@ const HomeComponent = () => {
   };
 
   return (
-    <div className="home-container">
+    <>
+      <Helmet>
+        <title>Moura Pereira Advogados - Assessoria Jurídica Completa</title>
+        <meta name="description" content="Moura Pereira Advogados oferece assessoria jurídica especializada em direito civil, trabalhista, familiar e do consumidor. Atendemos empresas e particulares em São Paulo com excelência e compromisso." />
+        <meta name="keywords" content="advogados, direito civil, direito trabalhista, direito familiar, direito do consumidor, assessoria jurídica, São Paulo, Moura Pereira" />
+      </Helmet>
+      <div className="home-container">
       <div className="hero-section">
         <img
           src={homeImage}
@@ -113,6 +120,7 @@ const HomeComponent = () => {
         <FormComponent onSubmit={handleFormSubmit} />
       </div>
     </div>
+    </>
   );
 };
 

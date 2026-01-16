@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Helmet } from "react-helmet";
 import "./BlogComponent.css";
 import SearchIcon from "../../assets/Search.svg";
 import { useNavigate } from "react-router-dom";
@@ -58,7 +59,13 @@ const BlogComponent = () => {
   });
 
   return (
-    <div className="blog-component">
+    <>
+      <Helmet>
+        <title>Blog Jurídico - Moura Pereira Advogados</title>
+        <meta name="description" content="Blog jurídico do Moura Pereira Advogados. Artigos sobre direito trabalhista, civil, familiar e do consumidor. Análises e reflexões sobre as principais áreas do Direito." />
+        <meta name="keywords" content="blog jurídico, direito trabalhista, direito civil, direito familiar, direito do consumidor, artigos jurídicos, Moura Pereira" />
+      </Helmet>
+      <div className="blog-component">
       <div className="title-texts">
         <h6>MOURA PEREIRA ADVOCACIA</h6>
         <h1>Publicações do Escritório</h1>
@@ -157,6 +164,7 @@ const BlogComponent = () => {
         </div>
       </div>
     </div>
+    </>
   );
 };
 

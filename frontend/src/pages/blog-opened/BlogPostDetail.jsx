@@ -1,4 +1,5 @@
 import React, { useEffect, useState, Fragment } from "react";
+import { Helmet } from "react-helmet";
 import { useParams } from "react-router-dom";
 // import { postsData } from "../../data/posts/PostsData";
 import "./BlogPostDetail.css";
@@ -32,7 +33,13 @@ const BlogPostDetail = () => {
   if (!post) return <div>Post não encontrado</div>;
 
   return (
-    <div className="post-detail-component">
+    <>
+      <Helmet>
+        <title>{post.title} - Moura Pereira Advogados</title>
+        <meta name="description" content={post.excerpt || `${post.title} - Artigo jurídico sobre direito. Moura Pereira Advogados.`} />
+        <meta name="keywords" content={`artigo jurídico, ${post.tags ? post.tags.join(', ') : 'direito'}, Moura Pereira`} />
+      </Helmet>
+      <div className="post-detail-component">
       <div className="detailed-post">
         <p className="post-date">{post.date}</p>
         <h1>{post.title}</h1>
@@ -49,6 +56,7 @@ const BlogPostDetail = () => {
         </div>
       </div>
     </div>
+    </>
   );
 };
 
