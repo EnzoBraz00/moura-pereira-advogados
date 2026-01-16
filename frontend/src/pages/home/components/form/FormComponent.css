@@ -155,6 +155,32 @@
   transition: all 0.3s ease;
 }
 
+.input-field select {
+  width: 100%;
+  height: 100%;
+  border: none;
+  outline: none;
+  padding-left: 0.21vw;
+  font-size: 0.83vw;
+  background: transparent;
+  box-sizing: border-box;
+  transition: all 0.3s ease;
+  color: #333;
+  cursor: pointer;
+  font-family: "PT Serif", serif;
+}
+
+.input-field select option {
+  color: #333;
+  background-color: #fff;
+  padding: 0.5vh;
+}
+
+.input-field select:focus {
+  color: #333;
+  font-weight: 500;
+}
+
 .input-field input:focus {
   color: #333;
   font-weight: 500;
