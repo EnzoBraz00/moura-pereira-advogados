@@ -2,6 +2,7 @@ import React, { useEffect, useState, Fragment } from "react";
 import { useParams } from "react-router-dom";
 // import { postsData } from "../../data/posts/PostsData";
 import "./BlogPostDetail.css";
+import API_BASE_URL from "../../config";
 
 const BlogPostDetail = () => {
   const { slug } = useParams();
@@ -13,7 +14,7 @@ const BlogPostDetail = () => {
     async function fetchPost() {
       try {
         setLoading(true);
-        const res = await fetch(`/api/posts/${slug}`);
+        const res = await fetch(`${API_BASE_URL}/api/posts/${slug}`);
         if (!res.ok) throw new Error("Falha ao carregar post");
         const data = await res.json();
         setPost(data);

@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./PostsComponent.css";
 import { useNavigate } from "react-router-dom";
+import API_BASE_URL from "../../../../config";
 
 const PostsComponent = () => {
   const [posts, setPosts] = useState([]);
@@ -17,7 +18,7 @@ const PostsComponent = () => {
     async function fetchPosts() {
       try {
         setLoading(true);
-        const res = await fetch(`/api/posts`);
+        const res = await fetch(`${API_BASE_URL}/api/posts`);
         if (!res.ok) throw new Error("Falha ao carregar posts");
         const data = await res.json();
         setPosts(data);

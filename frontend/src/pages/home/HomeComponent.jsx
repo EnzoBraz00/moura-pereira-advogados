@@ -6,6 +6,7 @@ import "./HomeComponent.css";
 import WorkingAreasComponent from "./components/working-areas/WorkingAreasComponent";
 import PostsComponent from "./components/posts/PostsComponent";
 import FormComponent from "./components/form/FormComponent";
+import API_BASE_URL from "../../config";
 
 const HomeComponent = () => {
   const workingAreasRef = useRef(null);
@@ -32,7 +33,7 @@ const HomeComponent = () => {
 
   const handleFormSubmit = async (formData) => {
     try {
-      const response = await fetch('/api/contatos', {
+      const response = await fetch(`${API_BASE_URL}/api/contatos`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(formData)

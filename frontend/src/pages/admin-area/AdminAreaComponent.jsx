@@ -5,6 +5,7 @@ import EditIcon from "../../assets/Edit.svg";
 import Modal from "../../components/modal/ModalComponent";
 import PostForm from "./form/FormComponent";
 import "./AdminAreaComponent.css";
+import API_BASE_URL from "../../config";
 
 const AdminAreaComponent = () => {
   const [searchTerm, setSearchTerm] = useState("");
@@ -25,11 +26,11 @@ const AdminAreaComponent = () => {
     try {
       setLoading(true);
 
-      const postsRes = await fetch(`/api/posts`);
+      const postsRes = await fetch(`${API_BASE_URL}/api/posts`);
       if (!postsRes.ok) throw new Error("Não foi possível carregar os posts");
       setPosts(await postsRes.json());
 
-      const contatosRes = await fetch(`/api/contatos`);
+      const contatosRes = await fetch(`${API_BASE_URL}/api/contatos`);
       if (!contatosRes.ok)
         throw new Error("Não foi possível carregar os contatos");
       setContatos(await contatosRes.json());
@@ -58,8 +59,8 @@ const AdminAreaComponent = () => {
     try {
       const method = editingPost ? "PUT" : "POST";
       const url = editingPost
-        ? `/api/posts/${editingPost.slug}` // <-- usa slug
-        : `/api/posts`;
+        ? `${API_BASE_URL}/api/posts/${editingPost.slug}` // <-- usa slug
+        : `${API_BASE_URL}/api/posts`;
 
       const res = await fetch(url, {
         method,
@@ -81,7 +82,7 @@ const AdminAreaComponent = () => {
     if (!window.confirm("Tem certeza que deseja excluir este post?")) return;
 
     try {
-      const res = await fetch(`/api/posts/${slug}`, {
+      const res = await fetch(`${API_BASE_URL}/api/posts/${slug}`, {
         method: "DELETE",
       });
 
