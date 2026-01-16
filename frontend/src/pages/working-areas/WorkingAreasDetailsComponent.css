@@ -80,14 +80,79 @@ body {
   box-shadow: 0 -0.4vh 2vh rgba(0, 0, 0, 0.1);
 }
 
-.area-texts-container .area-description {
+.accordion-container {
   margin-top: 6.4vh;
-  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 2vh;
+}
+
+.accordion-item {
+  border: 1px solid #e0e0e0;
+  border-radius: 0.42vw;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  background: #fff;
+  box-shadow: 0 0.2vh 1vh rgba(0, 0, 0, 0.05);
+}
+
+.accordion-item:hover {
+  box-shadow: 0 0.4vh 2vh rgba(0, 0, 0, 0.1);
+  transform: translateY(-0.2vh);
+}
+
+.accordion-title {
+  padding: 1.6vh 1.25vw;
   font-size: 1.04vw;
+  font-weight: 700;
+  cursor: pointer;
+  background: linear-gradient(135deg, #fff 0%, #f8f9fa 100%);
+  border: none;
+  outline: none;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.accordion-title:hover {
+  color: #c3a864;
+  background: linear-gradient(135deg, #f8f9fa 0%, #fff 100%);
+}
+
+.accordion-title::after {
+  content: "+";
+  position: absolute;
+  right: 1.25vw;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.25vw;
+  transition: transform 0.3s ease;
+}
+
+.accordion-item[open] .accordion-title::after {
+  content: "−";
+  transform: translateY(-50%) rotate(0deg);
+}
+
+.accordion-content {
+  padding: 0 1.25vw 1.6vh 1.25vw;
+  font-size: 0.83vw;
   line-height: 1.6;
-  opacity: 0;
-  transform: translateY(3vh);
-  animation: fadeInUp 0.8s ease forwards 0.3s;
+  color: #666;
+  background: #fafafa;
+  border-top: 1px solid #e0e0e0;
+  margin: 0;
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .services-container {
@@ -387,8 +452,23 @@ body {
     height: 8vh;
   }
 
-  .scroll-indicator::before {
-    width: 1vw;
-    height: 1.5vh;
+  .accordion-container {
+    margin-top: 4vh;
+    gap: 2vh;
+  }
+
+  .accordion-title {
+    font-size: 3.5vw;
+    padding: 3vh 4vw;
+  }
+
+  .accordion-title::after {
+    right: 4vw;
+    font-size: 4vw;
+  }
+
+  .accordion-content {
+    padding: 0 4vw 3vh 4vw;
+    font-size: 2.5vw;
   }
 }

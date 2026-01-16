@@ -1,6 +1,6 @@
 import React, { useRef } from "react";
 import homeImage from "../../assets/home-image.png";
-import aboutImage from "../../assets/about-image.jpg";
+import aboutImage from "../../assets/about-image.png";
 import arrowLeft from "../../assets/arrow-left.svg";
 import "./HomeComponent.css";
 import WorkingAreasComponent from "./components/working-areas/WorkingAreasComponent";
@@ -11,15 +11,6 @@ const HomeComponent = () => {
   const workingAreasRef = useRef(null);
   const aboutRef = useRef(null);
   const formRef = useRef(null);
-
-  const scrollToWorkingAreas = () => {
-    const yOffset = -100;
-    const y =
-      workingAreasRef.current.getBoundingClientRect().top +
-      window.pageYOffset +
-      yOffset;
-    window.scrollTo({ top: y, behavior: "smooth" });
-  };
 
   const scrollToAbout = () => {
     const yOffset = -120;
@@ -65,19 +56,19 @@ const HomeComponent = () => {
         />
         <div className="texts-container">
           <span>MOURA PEREIRA ADVOGADOS</span>
-          <h1>A determinação é a chave para o sucesso</h1>
+          <h1>Foi demitido e desconfia que não recebeu <br /> tudo o que tinha direito?</h1>
           <h3>
-            Compromisso com a justiça e dedicação em cada detalhe, oferecendo
-            soluções jurídicas seguras e eficazes para nossos clientes.
+          Se você trabalhou por anos em uma empresa, pode ter valores expressivos a receber. 
+          Nosso escritório atua exclusivamente <br></br>na defesa do trabalhador, garantindo que cada direito seja respeitado.
           </h3>
         </div>
         <div className="button-container">
-          <button className="working-areas-button" onClick={scrollToWorkingAreas}>
+          <button className="working-areas-button" onClick={scrollToForm}>
             <img src={arrowLeft} alt="Seta para a esquerda" />
-            ÁREAS DE ATUAÇÃO
+            QUERO SABER SE TENHO VALORES A RECEBER
           </button>
-          <button className="more-info-button" onClick={scrollToForm}>
-            AGENDE UMA CONSULTORIA
+          <button className="more-info-button" onClick={scrollToAbout}>
+            SAIBA MAIS
           </button>
         </div>
       </div>

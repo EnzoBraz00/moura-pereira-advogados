@@ -162,14 +162,13 @@ export const workingAreasData = {
     description:
       "Atuamos em casos de divórcio, guarda, pensão, união estável e outros conflitos familiares, buscando soluções equilibradas e juridicamente seguras.",
     fullDescription:
-      "O Direito de Família é o ramo do direito que regula as relações familiares e patrimoniais, garantindo direitos e deveres entre cônjuges, pais e filhos, e demais membros da família.\nO escritório Moura Pereira presta assessoria completa, buscando sempre a conciliação e proteção dos interesses de todas as partes envolvidas.",
+      "O Direito de Família é o ramo do direito que regula as relações familiares, garantindo direitos e deveres entre cônjuges, pais e filhos, e demais membros da família.\nO escritório Moura Pereira presta assessoria completa, buscando sempre a conciliação e proteção dos interesses de todas as partes envolvidas.",
     services: {
       consumer: [
         "Divórcio consensual e litigioso",
         "Guarda compartilhada ou unilateral",
         "Pensão alimentícia",
         "Adoção e investigação de paternidade",
-        "Planejamento sucessório familiar",
       ],
       provider: [
         "Assessoria jurídica para mediação e acordos familiares",
@@ -203,11 +202,6 @@ export const workingAreasData = {
         title: "Adoção e filiação",
         content:
           "- Assistimos todo o processo de adoção e investigação de paternidade, assegurando cumprimento da legislação e direitos das crianças.",
-      },
-      {
-        title: "Planejamento sucessório",
-        content:
-          "- Orientamos famílias sobre divisão de bens, testamentos e heranças, prevenindo conflitos futuros.",
       },
     ],
     cta: "Para maiores informações, agende uma consulta com nosso especialista",
@@ -428,6 +422,22 @@ export const workingAreasData = {
         title: "Consultoria preventiva",
         content:
           "- Analisamos riscos legais e orientamos medidas para evitar problemas judiciais futuros e garantir segurança jurídica.",
+      },
+    ],
+    accordion: [
+      {
+        title: "Direito Hospitalar",
+        content: `
+          <strong>Cobrança de Dívidas:</strong> Empresas fornecedoras de equipamentos médicos e máquinas hospitalares frequentemente enfrentam atrasos ou inadimplência no recebimento de pagamentos. Atuamos na cobrança extrajudicial dessas dívidas, utilizando notificações, acordos e mediações para garantir o recebimento sem necessidade de litígios judiciais prolongados.<br><br>
+          
+          <strong>Contratos com Hospitais e Fornecedores:</strong> Elaboramos e revisamos contratos entre fornecedores de máquinas hospitalares e instituições de saúde, assegurando cláusulas de pagamento, garantias e penalidades. Nossa assessoria preventiva evita disputas futuras e protege os interesses das empresas.<br><br>
+          
+          <strong>Mediação em Conflitos Hospitalares:</strong> Em casos de desacordos sobre entregas, manutenções ou pagamentos de equipamentos, oferecemos mediação extrajudicial para resolver conflitos de forma rápida e eficiente, preservando relacionamentos comerciais e evitando processos judiciais custosos.<br><br>
+          
+          <strong>Regularização de Documentos e Licenças:</strong> Auxiliamos na obtenção e regularização de licenças, certificados e documentos necessários para a comercialização de máquinas hospitalares, garantindo conformidade legal e agilidade em transações extrajudiciais.<br><br>
+          
+          <strong>Assessoria em Parcerias e Consórcios:</strong> Orientamos empresas em parcerias e consórcios para fornecimento de equipamentos a hospitais, incluindo acordos de compartilhamento de riscos e benefícios, com foco em segurança jurídica e sustentabilidade financeira.
+        `,
       },
     ],
     cta: "Agende uma consulta para soluções legais rápidas e seguras",

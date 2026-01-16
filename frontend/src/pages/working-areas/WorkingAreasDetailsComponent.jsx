@@ -45,6 +45,16 @@ const WorkingAreasDetailsComponent = () => {
             ))}
           </p>
         </div>
+        {area?.accordion && (
+          <div className="accordion-container">
+            {area.accordion.map((item, index) => (
+              <details key={index} className="accordion-item">
+                <summary className="accordion-title">{item.title}</summary>
+                <div className="accordion-content" dangerouslySetInnerHTML={{ __html: item.content }} />
+              </details>
+            ))}
+          </div>
+        )}
         <div className="services-container">
           <div className="services-section">
             <h2>PELO CLIENTE</h2>

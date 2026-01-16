@@ -15,9 +15,14 @@ const areas = [
     slug: "direito-consumidor",
   },
   {
-    title: "Direito de Família e Sucessões",
-    desc: "Formação, manutenção e extinção das relações entre os cônjuges, e entre estes e seus filhos. Planejamento e gestão jurídica da transmissão de bens e heranças",
+    title: "Direito de Família",
+    desc: "Formação, manutenção e extinção das relações entre os cônjuges, e entre estes e seus filhos.",
     slug: "direito-familia",
+  },
+  {
+    title: "Direito de Sucessões",
+    desc: "Planejamento e gestão jurídica da transmissão de bens e heranças.",
+    slug: "direito-sucessoes",
   },
   {
     title: "Direito Imobiliário",

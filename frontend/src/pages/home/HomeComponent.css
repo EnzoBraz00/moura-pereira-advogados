@@ -9,14 +9,14 @@ button {
   display: flex;
   flex-direction: column;
   position: relative;
-  min-height: 100vh;
+  /* Removido min-height: 100vh para não empurrar componentes */
   overflow: visible;
 }
 
 .hero-section {
   position: relative;
   width: 100%;
-  height: 100vh;
+  height: 80vh; /* Ajustado para ocupar 100% da primeira visão */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -28,12 +28,9 @@ button {
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
+  height: 80vh;
   object-fit: cover;
   z-index: 1;
-}
-.texts-container {
-  padding-top: 6.25vw;
 }
 
 .texts-container span,
@@ -48,20 +45,21 @@ h3 {
 
 .texts-container span {
   letter-spacing: 0.42vw;
-  font-size: 1.2vw;
+  font-size: 1vw; 
   padding-top: 4.17vw;
   max-width: 30vw;
   display: block;
 }
 
 .texts-container h1 {
-  font-size: 2.8vw;
+  font-size: 2.5vw; 
   font-weight: 700;
   line-height: 1.2;
+  margin-top: 0.83vw;
 }
 
 .texts-container h3 {
-  font-size: 1.2vw;
+  font-size: 1vw; 
   font-weight: 400;
   line-height: 1.5;
   margin-top: 0.83vw;
@@ -83,9 +81,9 @@ h3 {
   align-items: center;
   justify-content: center;
   gap: 0.52vw;
-  width: 12vw;
-  height: 2.8vw;
-  font-size: 0.9vw;
+  width: 22vw; /* Aumentado ainda mais */
+  height: 3.8vw;
+  font-size: 0.8vw; /* Reduzido para caber */
   cursor: pointer;
   transition: all 0.3s ease;
   border-radius: 0.42vw;
@@ -93,7 +91,11 @@ h3 {
 
 .working-areas-button {
   background-color: #fff;
+  padding: 12px 24px; /* Aumentado para mais espaço */
   border: 2px solid transparent;
+  white-space: nowrap; /* Impede quebra de linha */
+  overflow: hidden; /* Corta se necessário */
+  text-overflow: ellipsis; /* Adiciona "..." se cortar */
 }
 
 .working-areas-button:hover {
@@ -109,12 +111,13 @@ h3 {
 
 .more-info-button {
   background-color: transparent;
-  border: 3px solid black;
+  border: 3px solid #012e5e; /* azul mais forte */
+  color: #012e5e; /* texto azul para combinar */
 }
 
 .more-info-button:hover {
-  background-color: black;
-  color: #fff;
+  background-color: #012e5e; /* fundo azul */
+  color: #fff; /* texto branco para contraste */
   transform: translateY(-0.10vw);
 }
 
@@ -129,6 +132,7 @@ h3 {
 
 .about-container {
   margin-top: 6.67vw;
+  margin-bottom: 6.67vw;
   margin-left: 6.67vw;
   display: flex;
   flex-direction: row;
@@ -171,6 +175,7 @@ h3 {
 .about-image img{
   width: 24.167vw;
   height: 53.8vh;
+  object-fit: cover;
 }
 
 .contact-info {
@@ -182,7 +187,7 @@ h3 {
   align-items: center;
   flex-wrap: nowrap;
   margin: 0;
-  justify-content: flex-start;
+  justify-content: center;
   transition: transform 0.3s ease, color 0.3s ease;
 }
 
@@ -224,36 +229,61 @@ h3 {
 }
 
 @media (max-width: 834px) {
+  .hero-section {
+    height: 100vh;
+  }
+
   .home-img {
-    margin-top: 35px;
-    height: 30.9375vw;
+    height: 100vh;
   }
 
   .texts-container {
     display: flex;
     justify-content: center;
     flex-direction: column;
+    text-align: center;
+  }
+
+  .texts-container span,
+  h1,
+  h3 {
+    margin-left: 0;
+    color: #000; /* Preto para legibilidade */
+    text-align: center;
   }
 
   .texts-container span {
     font-size: 16px;
+    padding-top: 20px;
   }
 
   .texts-container h1 {
     font-size: 24px;
+    margin-top: 10px;
   }
 
   .texts-container h3 {
     font-size: 16px;
-    width: 50%;
+    margin-top: 10px;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .button-container {
+    margin-left: 0;
+    padding-top: 20px;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
   }
 
   .working-areas-button,
   .more-info-button {
     margin-top: 10px;
-    width: 120px;
-    height: 36px;
-    font-size: 10px
+    width: 80vw;
+    height: 50px;
+    font-size: 14px;
   }
 
   .working-areas-button img {
@@ -262,31 +292,21 @@ h3 {
 
   .about-container {
     display: flex;
-    justify-content: space-between;
-    margin-right: 60px;
-    margin-bottom: 32px;
+    justify-content: center;
+    align-items: center;
+    margin: 32px 16px;
+    gap: 16px;
   }
 
-  .contact-info{
-    margin-top: 8px;
-  }
-
-  .contact-info h3 {
-    font-size: 2.3vw;
-    margin-left: 4px;
-    margin-right: 4px;
-  }
-  #about-link{
-    font-size: 2.3vw  ;
-  }
-
-  .about-texts{
+  .about-texts {
     width: 60%;
+    text-align: center;
   }
-  .about-texts h6{
+
+  .about-texts h6 {
     font-size: 16px;
   }
-  
+
   .about-texts h1 {
     font-size: 24px;
   }
@@ -296,12 +316,27 @@ h3 {
   }
 
   .about-image img {
-    height: 340px;
-    width: 250px;
+    height: 200px;
+    width: 150px;
+    object-fit: cover;
+  }
+
+  .contact-info {
+    justify-content: center;
+    gap: 8px;
+    margin-top: 16px;
+  }
+
+  .contact-info h3 {
+    font-size: 14px;
+  }
+
+  #about-link {
+    font-size: 14px;
   }
 }
 
-@media (max-width: 440px){
+@media (max-width: 440px) {
   .home-img {
     display: none;
   }
@@ -312,6 +347,7 @@ h3 {
     justify-content: center;
     flex-direction: column;
     margin-top: 24px;
+    padding: 16px;
   }
 
   .texts-container span {
@@ -326,8 +362,9 @@ h3 {
   }
 
   .texts-container h3 {
-    font-size: 12x;
+    font-size: 12px;
     width: 90%;
+    text-align: center;
   }
 
   .button-container {
@@ -340,22 +377,21 @@ h3 {
 
   .about-container {
     flex-direction: column;
-    margin-right: 0;
-    margin-bottom: 0;
+    margin: 32px 16px;
+    gap: 16px;
   }
 
-  .about-texts{
+  .about-texts {
     width: 90%;
-    
-  }
-  .about-texts h6{
-    font-size: 12px;
     text-align: center;
   }
-  
+
+  .about-texts h6 {
+    font-size: 12px;
+  }
+
   .about-texts h1 {
     font-size: 16px;
-    text-align: center;
   }
 
   .about-texts p {
@@ -366,23 +402,18 @@ h3 {
   .contact-info {
     justify-content: center;
     gap: 8px;
-  }
-
-  .contact-info{
-    margin-top: 8px;
+    margin-top: 16px;
   }
 
   .contact-info h3 {
-    font-size: 4.3vw;
-    margin-left: 4px;
-    margin-right: 4px;
-  }
-  #about-link{
-    font-size: 3.3vw  ;
+    font-size: 12px;
   }
 
-  .about-container img {
+  #about-link {
+    font-size: 12px;
+  }
+
+  .about-image img {
     display: none;
   }
-  
 }
