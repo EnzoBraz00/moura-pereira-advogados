@@ -30,6 +30,22 @@ const HeaderComponent = () => {
     }, 100);
   }
 
+  function scrollToForm() {
+    navigate("/");
+    setIsSidebarOpen(false);
+    setTimeout(() => {
+      const formSection = document.querySelector(".form-container");
+      if (formSection) {
+        const yOffset = -120;
+        const y =
+          formSection.getBoundingClientRect().top +
+          window.pageYOffset +
+          yOffset;
+        window.scrollTo({ top: y, behavior: "smooth" });
+      }
+    }, 100);
+  }
+
   const toggleSidebar = () => {
     setIsSidebarOpen(!isSidebarOpen);
   };
@@ -65,6 +81,12 @@ const HeaderComponent = () => {
             <Link to="/blog" className="header-link">
               POSTS
             </Link>
+            <button
+              onClick={scrollToForm}
+              className="header-link"
+            >
+              FALE CONOSCO
+            </button>
           </div>
           <button
             className="hamburger-menu"
@@ -106,6 +128,9 @@ const HeaderComponent = () => {
               className="sidebar-link"
             >
               POSTS
+            </button>
+            <button onClick={scrollToForm} className="sidebar-link">
+              FALE CONOSCO
             </button>
           </nav>
         </div>

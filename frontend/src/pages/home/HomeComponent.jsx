@@ -1,9 +1,8 @@
 import React, { useRef } from "react";
 import homeImage from "../../assets/home-image.png";
-import aboutImage from "../../assets/about-image.jpg";
+import aboutImage from "../../assets/about-image.png";
 import arrowLeft from "../../assets/arrow-left.svg";
 import "./HomeComponent.css";
-import ObjectivesComponent from "./components/objectives/ObjectivesComponent";
 import WorkingAreasComponent from "./components/working-areas/WorkingAreasComponent";
 import PostsComponent from "./components/posts/PostsComponent";
 import FormComponent from "./components/form/FormComponent";
@@ -12,15 +11,6 @@ const HomeComponent = () => {
   const workingAreasRef = useRef(null);
   const aboutRef = useRef(null);
   const formRef = useRef(null);
-
-  const scrollToWorkingAreas = () => {
-    const yOffset = -100;
-    const y =
-      workingAreasRef.current.getBoundingClientRect().top +
-      window.pageYOffset +
-      yOffset;
-    window.scrollTo({ top: y, behavior: "smooth" });
-  };
 
   const scrollToAbout = () => {
     const yOffset = -120;
@@ -58,31 +48,29 @@ const HomeComponent = () => {
 
   return (
     <div className="home-container">
-      <img
-        src={homeImage}
-        alt="Estatua de ouro segurando uma coroa"
-        className="home-img"
-      />
-      <div className="texts-container">
-        <span>MOURA PEREIRA ADVOGADOS</span>
-        <h1>A determinação é a chave para o sucesso</h1>
-        <h3>
-          Compromisso com a justiça e dedicação em cada detalhe, oferecendo
-          soluções jurídicas seguras e eficazes para nossos clientes.
-        </h3>
-      </div>
-      <div className="button-container">
-        <button className="working-areas-button" onClick={scrollToWorkingAreas}>
-          <img src={arrowLeft} alt="Seta para a esquerda" />
-          ÁREAS DE ATUAÇÃO
-        </button>
-        <button className="more-info-button" onClick={scrollToAbout}>
-          SAIBA MAIS
-        </button>
-      </div>
-
-      <div ref={aboutRef} className="objectives-container">
-        <ObjectivesComponent />
+      <div className="hero-section">
+        <img
+          src={homeImage}
+          alt="Estatua de ouro segurando uma coroa"
+          className="home-img"
+        />
+        <div className="texts-container">
+          <span>MOURA PEREIRA ADVOGADOS</span>
+          <h1>Foi demitido e desconfia que não recebeu <br /> tudo o que tinha direito?</h1>
+          <h3>
+          Se você trabalhou por anos em uma empresa, pode ter valores expressivos a receber. 
+          Nosso escritório atua exclusivamente <br></br>na defesa do trabalhador, garantindo que cada direito seja respeitado.
+          </h3>
+        </div>
+        <div className="button-container">
+          <button className="working-areas-button" onClick={scrollToForm}>
+            <img src={arrowLeft} alt="Seta para a esquerda" />
+            QUERO SABER SE TENHO VALORES A RECEBER
+          </button>
+          <button className="more-info-button" onClick={scrollToAbout}>
+            SAIBA MAIS
+          </button>
+        </div>
       </div>
 
       <div ref={aboutRef} className="about-container">

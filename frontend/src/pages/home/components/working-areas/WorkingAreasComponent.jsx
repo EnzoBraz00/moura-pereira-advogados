@@ -15,19 +15,19 @@ const areas = [
     slug: "direito-consumidor",
   },
   {
-    title: "Direito de Familia",
-    desc: "Formação, manutenção e extinção das relações entre os cônjuges, e entre estes e seus filhos",
+    title: "Direito de Família",
+    desc: "Formação, manutenção e extinção das relações entre os cônjuges, e entre estes e seus filhos.",
     slug: "direito-familia",
   },
   {
-    title: "Direito Sucessões",
-    desc: "Transferência do patrimônio de alguém, depois de sua morte, em virtude de lei ou testamento.",
-    slug: 'direito-sucessoes'
+    title: "Direito de Sucessões",
+    desc: "Planejamento e gestão jurídica da transmissão de bens e heranças.",
+    slug: "direito-sucessoes",
   },
   {
-    title: "Direito Civil",
-    desc: "Determinar quais são as regras e condutas que pessoas físicas e jurídicas devem ter em sociedade.",
-    slug: "direito-civil"
+    title: "Direito Imobiliário",
+    desc: "Proteção e defesa de direitos sobre bens imóveis, contratos, aquisição e transferência de propriedades.",
+    slug: "direito-imobiliario"
   },
   {
     title: "Direito Extrajudicial",
