@@ -19,7 +19,7 @@ async function main() {
   // ==== POSTS ====
   const postsData = [
     {
-      image: "/src/assets/post-image.jpg",
+      image: "/uploads/post-image.jpg",
       tags: ["Trabalhista", "Humano", "Opinião"],
       author: "João Carlos Moura",
       title:
@@ -39,7 +39,7 @@ async function main() {
       ],
     },
     {
-      image: "/src/assets/post-image.jpg",
+      image: "/uploads/post-image.jpg",
       tags: ["Empresarial", "Mercado", "Estratégia"],
       author: "João Carlos Moura",
       title:
@@ -58,7 +58,7 @@ async function main() {
       ],
     },
     {
-      image: "/src/assets/post-image.jpg",
+      image: "/uploads/post-image.jpg",
       tags: ["Civil", "Família", "Direitos"],
       author: "João Carlos Moura",
       title:
@@ -77,7 +77,7 @@ async function main() {
       ],
     },
     {
-      image: "/src/assets/post-image.jpg",
+      image: "/uploads/post-image.jpg",
       tags: ["Consumidor", "Proteção", "Direitos"],
       author: "João Carlos Moura",
       title:
@@ -96,7 +96,7 @@ async function main() {
       ],
     },
     {
-      image: "/src/assets/post-image.jpg",
+      image: "/uploads/post-image.jpg",
       tags: ["Sucessões", "Patrimônio", "Planejamento"],
       author: "João Carlos Moura",
       title:
@@ -115,7 +115,7 @@ async function main() {
       ],
     },
     {
-      image: "/src/assets/post-image.jpg",
+      image: "/uploads/post-image.jpg",
       tags: ["Trabalhista", "Reforma", "Mercado"],
       author: "João Carlos Moura",
       title:
@@ -134,7 +134,7 @@ async function main() {
       ],
     },
     {
-      image: "/src/assets/post-image.jpg",
+      image: "/uploads/post-image.jpg",
       tags: ["Empresarial", "Startup", "Inovação"],
       author: "João Carlos Moura",
       title:
