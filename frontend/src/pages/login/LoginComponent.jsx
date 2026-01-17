@@ -2,6 +2,7 @@
   import { useState, useEffect } from "react";
   import { useNavigate } from "react-router-dom";
   import "./LoginComponent.css"
+  import API_BASE_URL from "../../config";
 
   const LoginComponent = () => {
     const [email, setEmail] = useState("");
@@ -23,7 +24,7 @@
       setError("");
       
       try {      
-        const res = await fetch(`/auth/login`, {
+        const res = await fetch(`${API_BASE_URL}/auth/login`, {
           method: "POST",
           headers: { 
             "Content-Type": "application/json",
