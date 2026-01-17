@@ -21,7 +21,7 @@ async function main() {
     {
       image: "/uploads/post-image.jpg",
       tags: ["Trabalhista", "Humano", "Opinião"],
-      author: "João Carlos Moura",
+      author: "João Carlos Moura",  
       title:
         "Entre Leis, Direitos e Pessoas: Olhares Humanos sobre a Advocacia Trabalhista",
       smallTitle: "Olhares Humanos sobre a Advocacia Trabalhista",
