@@ -40,9 +40,7 @@ app.use("/restricted", restrictedRoutes);
 
 /* ===== Utils ===== */
 function toFullImageUrl(image) {
-  if (!image) return image;
-  if (image.startsWith("http")) return image;
-  return `${process.env.API_URL}${image}`;
+  return image
 }
 
 /* ===== POSTS ===== */
