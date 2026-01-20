@@ -9,7 +9,6 @@ button {
   display: flex;
   flex-direction: column;
   position: relative;
-  /* Removido min-height: 100vh para não empurrar componentes */
   overflow: visible;
 }
 
@@ -45,21 +44,21 @@ h3 {
 
 .texts-container span {
   letter-spacing: 0.42vw;
-  font-size: 1vw; 
+  font-size: 1vw;
   padding-top: 4.17vw;
   max-width: 30vw;
   display: block;
 }
 
 .texts-container h1 {
-  font-size: 2.5vw; 
+  font-size: 2.5vw;
   font-weight: 700;
   line-height: 1.2;
   margin-top: 0.83vw;
 }
 
 .texts-container h3 {
-  font-size: 1vw; 
+  font-size: 1vw;
   font-weight: 400;
   line-height: 1.5;
   margin-top: 0.83vw;
@@ -100,13 +99,13 @@ h3 {
 
 .working-areas-button:hover {
   background-color: #f3f3f3;
-  transform: translateY(-0.10vw);
+  transform: translateY(-0.1vw);
   box-shadow: 0 0.21vw 0.63vw rgba(0, 0, 0, 0.1);
 }
 
 .working-areas-button:active {
   transform: scale(0.95);
-  box-shadow: 0 0.10vw 0.31vw rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0.1vw 0.31vw rgba(0, 0, 0, 0.2);
 }
 
 .more-info-button {
@@ -118,7 +117,7 @@ h3 {
 .more-info-button:hover {
   background-color: #012e5e; /* fundo azul */
   color: #fff; /* texto branco para contraste */
-  transform: translateY(-0.10vw);
+  transform: translateY(-0.1vw);
 }
 
 .more-info-button:active {
@@ -172,7 +171,7 @@ h3 {
   margin-bottom: 0.83vw;
 }
 
-.about-image img{
+.about-image img {
   width: 24.167vw;
   height: 53.8vh;
   object-fit: cover;
@@ -188,7 +187,9 @@ h3 {
   flex-wrap: nowrap;
   margin: 0;
   justify-content: center;
-  transition: transform 0.3s ease, color 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    color 0.3s ease;
 }
 
 .contact-info:hover {
@@ -202,7 +203,7 @@ h3 {
   white-space: nowrap;
 }
 
-#about-link{
+#about-link {
   text-decoration: underline;
   color: #c3a864;
   cursor: pointer;
@@ -230,11 +231,13 @@ h3 {
 
 @media (max-width: 834px) {
   .hero-section {
-    height: 100vh;
+    height: 120vw;
   }
 
   .home-img {
-    height: 100vh;
+    height: 120vw;
+    object-fit: cover;
+    display: block;
   }
 
   .texts-container {
@@ -248,7 +251,7 @@ h3 {
   h1,
   h3 {
     margin-left: 0;
-    color: #000; /* Preto para legibilidade */
+    color: #000;
     text-align: center;
   }
 
@@ -342,7 +345,7 @@ h3 {
   }
 
   .texts-container {
-    background-color: #EEF3F9;
+    background-color: #eef3f9;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -368,7 +371,7 @@ h3 {
   }
 
   .button-container {
-    background-color: #EEF3F9;
+    background-color: #eef3f9;
     width: 100%;
     justify-content: center;
     margin: 0 auto;

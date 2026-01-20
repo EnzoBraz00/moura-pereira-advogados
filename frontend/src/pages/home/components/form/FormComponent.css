@@ -160,17 +160,18 @@
   height: 100%;
   border: none;
   outline: none;
-  padding-left: 0.21vw;
-  font-size: 0.83vw;
+  padding-left: 8px;
+  font-size: 16px;
   background: transparent;
   box-sizing: border-box;
   transition: all 0.3s ease;
-  color: #333;
+  color: #999;
   cursor: pointer;
   font-family: "PT Serif", serif;
 }
 
 .input-field select option {
+  font-size: 12px;
   color: #333;
   background-color: #fff;
   padding: 0.5vh;
@@ -489,12 +490,11 @@
   }
 
   .input-field input,
-  .form-input-big .input-field textarea {
+  .form-input-big .input-field textarea, .optionField{
     padding-left: 8px;
     font-size: 16px;
   }
 
-  .input-field input,
   .form-input-big .input-field textarea img{
     font-size: 16px;
   }

@@ -107,9 +107,9 @@ export default function ContactForm({ onSubmit, initialData }) {
                   value={formData.tipoNegocio}
                   onChange={handleChange}
                 >
-                  <option value="">Selecione o tipo de negócio</option>
-                  <option value="Pessoa Física">Pessoa Física</option>
-                  <option value="Pessoa Jurídica">Pessoa Jurídica</option>
+                  <option value="" className="optionField">Selecione o tipo de negócio</option>
+                  <option value="Pessoa Física" className="optionField">Pessoa Física</option>
+                  <option value="Pessoa Jurídica" className="optionField">Pessoa Jurídica</option>
                 </select>
               </div>
             </div>
