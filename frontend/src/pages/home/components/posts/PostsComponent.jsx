@@ -14,6 +14,16 @@ const PostsComponent = () => {
     navigate(slug ? `/blog/${slug}` : "/blog");
   }
 
+  function getContentPreview(content, maxLength = 330) {
+    if (!Array.isArray(content)) return "";
+
+    const fullText = content.join(" ");
+
+    return fullText.length > maxLength
+      ? fullText.slice(0, maxLength) + "..."
+      : fullText;
+  }
+
   useEffect(() => {
     async function fetchPosts() {
       try {
@@ -39,17 +49,19 @@ const PostsComponent = () => {
       <div className="posts-preview-list">
         {loading && <p>Carregando...</p>}
         {error && <p style={{ color: "red" }}>{error}</p>}
+
         {!loading &&
           !error &&
           posts.slice(0, 3).map((post) => (
             <div
               className="post-item"
-              key={post.title}
-              onClick={() => handleNavigation(post?.slug)}
+              key={post.slug || post.id}
+              onClick={() => handleNavigation(post.slug)}
             >
               <div className="post-specs">
                 <span className="post-author">
-                  Autor: <span className="author-name">{post.author}</span>
+                  Autor:{" "}
+                  <span className="author-name">{post.author}</span>
                 </span>
               </div>
 
@@ -59,11 +71,7 @@ const PostsComponent = () => {
                   : post.title}
               </h4>
 
-              <p>
-                {post.content.length > 140
-                  ? post.content.slice(0, 140) + "..."
-                  : post.content}
-              </p>
+              <p>{getContentPreview(post.content)}</p>
             </div>
           ))}
       </div>
