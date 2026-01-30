@@ -7,6 +7,7 @@ import "./HomeComponent.css";
 import WorkingAreasComponent from "./components/working-areas/WorkingAreasComponent";
 import PostsComponent from "./components/posts/PostsComponent";
 import FormComponent from "./components/form/FormComponent";
+import ReviewsCarousel from "./components/reviews/ReviewsCarousel";
 import API_BASE_URL from "../../config";
 
 const HomeComponent = () => {
@@ -114,6 +115,10 @@ const HomeComponent = () => {
 
       <div className="posts-container">
         <PostsComponent />
+      </div>
+
+      <div className="reviews-container">
+        <ReviewsCarousel />
       </div>
 
       <div ref={formRef} className="form-container">

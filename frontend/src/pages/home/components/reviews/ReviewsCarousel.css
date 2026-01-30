@@ -1,0 +1,283 @@
+.reviews-section {
+  margin: 2.67vw 0;
+  text-align: center;
+}
+
+.reviews-section h6 {
+  font-size: 0.83vw;
+  letter-spacing: 0.16vw;
+  font-weight: 700;
+  color: #c3a864;
+  margin-bottom: 0.42vw;
+}
+
+.reviews-section h2 {
+  font-size: 1.67vw;
+  font-weight: 700;
+  margin-bottom: 3.33vw;
+}
+
+.reviews-carousel {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 20vw;
+}
+
+.review-card {
+  position: absolute;
+  width: 22vw;
+  padding: 1.67vw;
+  background-color: #ffffff;
+  border-radius: 0.83vw;
+  box-shadow: 0 0.42vw 1.25vw rgba(0, 0, 0, 0.1);
+  transition: all 0.6s ease;
+  opacity: 0;
+  transform: scale(0.85);
+}
+
+.review-card.active {
+  opacity: 1;
+  transform: scale(1);
+  z-index: 3;
+}
+
+.review-card.left {
+  opacity: 0.5;
+  transform: translateX(-26vw) scale(0.9);
+  z-index: 2;
+}
+
+.review-card.right {
+  opacity: 0.5;
+  transform: translateX(26vw) scale(0.9);
+  z-index: 2;
+}
+
+.review-card.hidden {
+  opacity: 0;
+  transform: scale(0.8);
+  z-index: 1;
+}
+
+.review-header {
+  display: flex;
+  align-items: center;
+  gap: 0.83vw;
+  margin-bottom: 1.25vw;
+}
+
+.avatar {
+  width: 2.5vw;
+  height: 2.5vw;
+  border-radius: 50%;
+  background-color: #012e5e;
+  color: #ffffff;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.83vw;
+}
+
+.author-info {
+  text-align: left;
+}
+
+.author-info strong {
+  font-size: 0.83vw;
+  display: block;
+}
+
+.author-info span {
+  font-size: 0.73vw;
+  color: #777;
+}
+
+.review-text {
+  font-size: 0.83vw;
+  line-height: 1.6;
+  margin-bottom: 1.25vw;
+}
+
+.review-stars {
+  color: #c3a864;
+  font-size: 0.83vw;
+}
+
+.review-stars .star {
+  margin-right: 0.21vw;
+}
+
+/* TABLET */
+@media (max-width: 834px) {
+  .reviews-section {
+    margin: 40px 0;
+  }
+
+  .reviews-section h6 {
+    font-size: 16px;
+    letter-spacing: 2px;
+    margin-bottom: 8px;
+  }
+
+  .reviews-section h2 {
+    font-size: 32px;
+    margin-bottom: 40px;
+  }
+
+  .reviews-carousel {
+    height: 320px;
+  }
+
+  .review-card {
+    width: 70%;
+    max-width: 450px;
+    padding: 24px;
+    border-radius: 12px;
+  }
+
+  .review-card.active {
+    opacity: 1;
+    transform: scale(1);
+    z-index: 3;
+  }
+
+  .review-card.left {
+    opacity: 0.3;
+    transform: translateX(-75%) scale(0.85);
+    z-index: 2;
+  }
+
+  .review-card.right {
+    opacity: 0.3;
+    transform: translateX(75%) scale(0.85);
+    z-index: 2;
+  }
+
+  .review-card.hidden {
+    opacity: 0;
+    transform: scale(0.7);
+    z-index: 1;
+  }
+
+  .review-header {
+    gap: 12px;
+    margin-bottom: 16px;
+  }
+
+  .avatar {
+    width: 48px;
+    height: 48px;
+    font-size: 18px;
+  }
+
+  .author-info strong {
+    font-size: 18px;
+  }
+
+  .author-info span {
+    font-size: 14px;
+  }
+
+  .review-text {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 16px;
+  }
+
+  .review-stars {
+    font-size: 18px;
+  }
+
+  .review-stars .star {
+    margin-right: 4px;
+  }
+}
+
+/* MOBILE */
+@media (max-width: 440px) {
+  .reviews-section {
+    margin: 32px 0;
+  }
+
+  .reviews-section h6 {
+    font-size: 14px;
+    letter-spacing: 1.5px;
+    margin-bottom: 6px;
+  }
+
+  .reviews-section h2 {
+    font-size: 24px;
+    margin-bottom: 32px;
+    padding: 0 16px;
+  }
+
+  .reviews-carousel {
+    height: 300px;
+  }
+
+  .review-card {
+    width: 85%;
+    padding: 20px;
+    border-radius: 10px;
+  }
+
+  .review-card.active {
+    opacity: 1;
+    transform: scale(1);
+    z-index: 3;
+  }
+
+  .review-card.left {
+    opacity: 0.2;
+    transform: translateX(-90%) scale(0.8);
+    z-index: 2;
+  }
+
+  .review-card.right {
+    opacity: 0.2;
+    transform: translateX(90%) scale(0.8);
+    z-index: 2;
+  }
+
+  .review-card.hidden {
+    opacity: 0;
+    transform: scale(0.6);
+    z-index: 1;
+  }
+
+  .review-header {
+    gap: 10px;
+    margin-bottom: 14px;
+  }
+
+  .avatar {
+    width: 42px;
+    height: 42px;
+    font-size: 16px;
+  }
+
+  .author-info strong {
+    font-size: 16px;
+  }
+
+  .author-info span {
+    font-size: 13px;
+  }
+
+  .review-text {
+    font-size: 15px;
+    line-height: 1.6;
+    margin-bottom: 14px;
+  }
+
+  .review-stars {
+    font-size: 16px;
+  }
+
+  .review-stars .star {
+    margin-right: 3px;
+  }
+}
