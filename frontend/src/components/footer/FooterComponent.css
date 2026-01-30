@@ -275,9 +275,6 @@
   .footer-contents{
     flex-direction: column;
   }
-  .adress a {
-    font-size: 8px;
-  }
 
   .footer-wrapper button {
     margin-top: 8px;
