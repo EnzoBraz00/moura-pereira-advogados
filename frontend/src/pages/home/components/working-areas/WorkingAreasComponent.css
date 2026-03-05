@@ -16,15 +16,15 @@
 }
 
 .working-areas-component h5{
-    font-size: 0.83vw;
+    font-size: 14px;
     font-weight: 700;
     color: #C3A864;
     padding-top: 3.33vh;
-    letter-spacing: 0.16vw;
+    letter-spacing: 2px;
 }
 
 .working-areas-component h2{
-    font-size: 1.67vw;
+    font-size: 24px;
     font-weight: 700;
     color: #FFFFFF;
     margin-bottom: 2.67vh;
