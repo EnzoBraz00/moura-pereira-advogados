@@ -68,7 +68,7 @@ app.get("/api/posts/:slug", async (req, res) => {
 });
 
 app.post("/api/posts", async (req, res) => {
-  const { image, tags, title, smallTitle, slug, excerpt, date, content } =
+  const { image, tags, title, smallTitle, slug, excerpt, date, content, author } =
     req.body;
 
   try {
@@ -82,6 +82,7 @@ app.post("/api/posts", async (req, res) => {
         excerpt,
         date,
         content,
+        author,
       },
     });
     res.json(newPost);
@@ -92,7 +93,7 @@ app.post("/api/posts", async (req, res) => {
 
 app.put("/api/posts/:slug", async (req, res) => {
   const { slug } = req.params;
-  const { image, tags, title, smallTitle, excerpt, date, content } = req.body;
+  const { image, tags, title, smallTitle, excerpt, date, content, author } = req.body;
 
   try {
     const updatedPost = await prisma.post.update({
@@ -105,6 +106,7 @@ app.put("/api/posts/:slug", async (req, res) => {
         excerpt,
         date,
         content,
+        author,
       },
     });
     res.json(updatedPost);

@@ -33,7 +33,8 @@ const BlogComponent = () => {
         const res = await fetch(`${API_BASE_URL}/api/posts`);
         if (!res.ok) throw new Error("Falha ao carregar posts");
         const data = await res.json();
-        setPosts(data);
+        const sortedPosts = data.sort((a, b) => new Date(b.date) - new Date(a.date));
+        setPosts(sortedPosts);
       } catch (err) {
         setError(err.message);
       } finally {

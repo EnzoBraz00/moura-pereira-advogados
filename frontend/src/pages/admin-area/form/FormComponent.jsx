@@ -8,6 +8,7 @@ export default function PostForm({ onSubmit, initialData }) {
     slug: "",
     excerpt: "",
     image: "",
+    author: "",
     tags: "",
     date: new Date().toISOString().slice(0, 10),
     content: "",
@@ -71,6 +72,13 @@ export default function PostForm({ onSubmit, initialData }) {
           placeholder="URL da imagem"
           value={formData.image}
           onChange={handleChange}
+        />
+        <input
+          name="author"
+          placeholder="Autor"
+          value={formData.author}
+          onChange={handleChange}
+          required
         />
         <input
           name="tags"
