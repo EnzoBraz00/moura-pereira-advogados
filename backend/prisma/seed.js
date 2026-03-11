@@ -8,13 +8,12 @@ async function main() {
   const rawPass = process.env.ADMIN_PASSWORD;
   const password = await bcrypt.hash(rawPass, 10);
 
-  const exists = await prisma.user.findUnique({ where: { email } });
-  if (!exists) {
-    await prisma.user.create({ data: { email, password } });
-    console.log("✅ Admin criado:", email);
-  } else {
-    console.log("ℹ️ Admin já existe.");
-  }
+  await prisma.user.upsert({
+    where: { email },
+    update: { password },
+    create: { email, password },
+  });
+  console.log("✅ Admin atualizado/criado:", email);
 
   // ==== POSTS ====
   const postsData = [
